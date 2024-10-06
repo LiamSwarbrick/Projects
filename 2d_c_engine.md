@@ -1,4 +1,4 @@
-C 2D platformer engine
+# 2D Platformer Engine in C
 
 [Source code](source/2d_platformer/planetarium-project-snippet-for-showcasing/src)
 
@@ -7,20 +7,23 @@ Its modularly programmed so that tooling is easy. The asset pipeline is seamless
 
 I want to program and release a full length 2D story/platforming game in this way eventually since I love 2D indie games.
 
+![Animation showcase](files/planetarium-animation-showcase-final.gif)
+
 ### Level creation and serialisation
 
 Serialisation uses JSON and I kept it simple and clean.
 
 I also made sure to get the character controller feeling good, including ground friction, air resistance, coyote time, varying jump height by how long you hold the jump button. I set these parameters to give tight feeling control of the player character.
 
+Here I've added lots of player entities for fun:
+
 ![Gameplay Example](files/planetarium-camera-and-entities.gif)
 
-I store the tilemap data, and a list of entities.
-Here I've added lots of player entities for fun:
+The tilemap data, list of entities are serialised like so:
 
 ```json
 {
-	"world_position": { "x": 0, "y": 0 },
+    "world_position": { "x": 0, "y": 0 },
 	"tilemap": {
 		"tileset_name": "tileset_underground",
 		"rows":	14,
@@ -58,11 +61,21 @@ Here I've added lots of player entities for fun:
 ```
 
 I needed to make a simple editor for creating the tile maps:
+
 ![Tile editor](files/planetarium-initial-tilemap-editor.gif)
 
 ### Sprite system loading Aseprite files
 
-![Animation showcase](files/planetarium-animation-showcase-final.gif)
+<img src="files/planetarium-collision-box.PNG" alt="Collision box from aseprite" width="60%">
+
+Entities can have a sprite state component which handles all there sprite updates in a very easy way.
+
+Directly loads the following data from Aseprite files:
+- Animation names (Prefix name with 'L_' for my program to recognise it as a looping animation)
+- How long each individual frame lasts
+- Collision box setting through Aseprite's slices feature
+- Setting pivot (origin) of sprite
+
 
 ```c
 typedef struct Sprite_Animation
@@ -110,16 +123,6 @@ void draw_sprite(Sprite* sprite, Sprite_State state, Vector2 pos);
 void draw_sprite_collision(Sprite* sprite, Vector2 pos);
 
 ```
-
-Entities can have a sprite state component which handles all there sprite updates in a very easy way.
-
-Directly loads the following data from Aseprite files:
-- Animation names (Prefix name with 'L_' for my program to recognise it as a looping animation)
-- How long each individual frame lasts
-- Collision box setting through Aseprite's slices feature
-- Setting pivot (origin) of sprite
-
-![Collision box from Aseprite](files/planetarium-collision-box.PNG)
 
 ### Easy to work with entity system
 
