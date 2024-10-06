@@ -1,0 +1,19 @@
+Weapon platformer
+
+Other game ideas
+{
+Cave story / Undertale vibes but with real time combat Link To The Past like combat.
+
+Dungeons are rogue-like Enter the gungeon style places.
+
+So like Link Between Worlds / LTTP overworld and towns,
+but the actual dungeons are like Enter the Gungeon,
+And character story like Undertale.
+
+Undertale story has great pacing, make sure to pace story and gameplay.
+
+
+// Dungeons are like enter the gungeon survive multiple floors like places
+// in rogue like fasion
+// However they are not procedually generated so can be designed cool.
+}

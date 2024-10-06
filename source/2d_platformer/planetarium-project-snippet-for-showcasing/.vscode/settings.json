@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "raylib.h": "c",
+        "level.h": "c",
+        "collision.h": "c",
+        "components.h": "c",
+        "entity.h": "c",
+        "raymath.h": "c",
+        "game.h": "c",
+        "sprite.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}

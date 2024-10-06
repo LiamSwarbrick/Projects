@@ -1,0 +1,3 @@
+Physics when tabbed-out with fullscreen mode causes janky physics somehow. (Player flying)
+
+With multiple players entities in room file, the grounded condition is shared which is wrong and allows for double jumping although in the actual game this will never show up

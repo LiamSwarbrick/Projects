@@ -1,0 +1,6 @@
+{
+    "name":         "tileset_underground",
+    "texture":      "assets/test_tiles.aseprite",
+    "tile_width":   16,
+    "tile_height":  16
+}
