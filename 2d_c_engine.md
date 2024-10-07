@@ -9,60 +9,10 @@ I want to program and release a full length 2D story/platforming game in this wa
 
 ![Animation showcase](files/planetarium-animation-showcase-final.gif)
 
-### Level creation and serialisation
-
-Serialisation uses JSON and I kept it simple and clean.
-
-I also made sure to get the character controller feeling good, including ground friction, air resistance, coyote time, varying jump height by how long you hold the jump button. I set these parameters to give tight feeling control of the player character.
-
-Here I've added lots of player entities for fun:
-
-![Gameplay Example](files/planetarium-camera-and-entities.gif)
-
-The tilemap data, list of entities are serialised like so:
-
-```json
-{
-    "world_position": { "x": 0, "y": 0 },
-	"tilemap": {
-		"tileset_name": "tileset_underground",
-		"rows":	14,
-		"columns":	16,
-		"ground":	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-		"bg":	[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
-	},
-	"entities": [
-		{
-			"spawn_point": { "x": 128, "y": 128 },
-			"type": "player"
-		},
-		{
-			"spawn_point": { "x": 100, "y": 64 },
-			"type": "player"
-		},
-		{
-			"spawn_point": { "x": 50, "y": 128 },
-			"type": "player"
-		},
-		{
-			"spawn_point": { "x": 55, "y": 64 },
-			"type": "player"
-		},
-		{
-			"spawn_point": { "x": 60, "y": 128 },
-			"type": "player"
-		},
-		{
-			"spawn_point": { "x": 70, "y": 64 },
-			"type": "player"
-		}
-	]
-}
-```
-
-I needed to make a simple editor for creating the tile maps:
-
-![Tile editor](files/planetarium-initial-tilemap-editor.gif)
+| Character controller        |
+|:----------------------------|
+| I made sure to get the character controller feeling good, implementing ground friction, air resistance, coyote time and control over jump height.
+I set these parameters to give tight feeling control of the player character. I've had plenty of experience releasing 2D games for game-jams, getting lots of feedback from players, and its always a good feeling player controller that people really notice!|
 
 ### Sprite system loading Aseprite files
 
@@ -123,6 +73,59 @@ void draw_sprite(Sprite* sprite, Sprite_State state, Vector2 pos);
 void draw_sprite_collision(Sprite* sprite, Vector2 pos);
 
 ```
+
+### Level creation and serialisation
+
+Serialisation uses JSON and I kept it simple and clean.
+
+Here I've added lots of player entities for fun:
+
+![Gameplay Example](files/planetarium-camera-and-entities.gif)
+
+Here's the JSON file for this room of entities and tilemap.
+
+```json
+{
+    "world_position": { "x": 0, "y": 0 },
+	"tilemap": {
+		"tileset_name": "tileset_underground",
+		"rows":	14,
+		"columns":	16,
+		"ground":	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+		"bg":	[2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+	},
+	"entities": [
+		{
+			"spawn_point": { "x": 128, "y": 128 },
+			"type": "player"
+		},
+		{
+			"spawn_point": { "x": 100, "y": 64 },
+			"type": "player"
+		},
+		{
+			"spawn_point": { "x": 50, "y": 128 },
+			"type": "player"
+		},
+		{
+			"spawn_point": { "x": 55, "y": 64 },
+			"type": "player"
+		},
+		{
+			"spawn_point": { "x": 60, "y": 128 },
+			"type": "player"
+		},
+		{
+			"spawn_point": { "x": 70, "y": 64 },
+			"type": "player"
+		}
+	]
+}
+```
+
+I needed to make a simple editor for creating the tile maps:
+
+![Tile editor](files/planetarium-initial-tilemap-editor.gif)
 
 ### Easy to work with entity system
 
