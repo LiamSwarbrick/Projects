@@ -15,7 +15,7 @@ Here are some of my projects, I'm passionate about **computer graphics and games
   - [Library Website in Python-Flask](#library-website-in-python-flask)
   - [My Godot game that ran on the Nintendo Switch](#my-godot-game-that-ran-on-the-nintendo-switch)
   - [Snippet of my older unfinished but of interest projects](#snippet-of-my-older-unfinished-but-of-interest-projects)
-    - [A-Levels: Dual-Quaternion vertex skinning implementation I could never run](#a-levels-dual-quaternion-vertex-skinning-implementation-i-could-never-run)
+    - [Dual-Quaternion vertex skinning implementation I couldn't render (2020)](#dual-quaternion-vertex-skinning-implementation-i-couldnt-render-2020)
     - [Unfinished C Game-Boy Emulator (2019)](#unfinished-c-game-boy-emulator-2019)
     - [C# Game drop-down console (2018)](#c-game-drop-down-console-2018)
 
@@ -105,11 +105,11 @@ The Godot engine founder Ariel Manzur emailed me asking if I'd like to see a bui
 ## Snippet of my older unfinished but of interest projects
 I have many older and unfinished projects in all sorts of languages: Python, C#, Haxe, Rust etc. Here's some random examples...
 
-### A-Levels: Dual-Quaternion vertex skinning implementation I could never run
+### Dual-Quaternion vertex skinning implementation I couldn't render (2020)
 
-For my A-Level Computer Science project I went way out of my depth but it really helped me so much more years to come than any boring project I could've finished...
+For my A-Level Computer Science project I went for a far too challenging project for my 16 year old self but it helped me so much more in the years to come than any boring project I could've finished...
 
-I got an OpenGL 4.5 rendering working that could load obj files, and wanted to try skeletal animation. Naively I went straight to trying to implemented a more advanced technique from [this paper](https://team.inria.fr/imagine/files/2014/10/skinning_dual_quaternions.pdf) that used dual-quaternion transforms instead of matrices, and while I did learn a lot about skinning algorithms researching it. Once I had written a lot of C code for it (even doing premature optimisations like caching joint keyframes), I realised that I couldn't source assets with skeletal animations stored in such a format without writing a custom exporter for Blender. It did teach me to just go with the simpler algorithm unless you specifically run into a problem with it however.
+I got an OpenGL 4.5 rendering working that could load obj files, and wanted to try skeletal animation. Naively I went straight to trying to implemented a more advanced technique from [this paper](https://team.inria.fr/imagine/files/2014/10/skinning_dual_quaternions.pdf) that used dual-quaternion transforms instead of matrices, and while I did learn a lot about skinning algorithms researching it. Once I had written a lot of C code for it (even doing premature optimisations like caching joint keyframes), I realised that I couldn't source assets with skeletal animations stored in such a format without writing a custom exporter for Blender. I now know better and would have just gone with the simpler algorithm until performance or rendering quality called for more.
 
 See my implementation in the C header file [skeletal_animation.h](source/skrewrite-dual-quat-snippet/game/src/skeletal_animation.h) and the shader code [rigged_mesh_vertex_shader.glsl...](source/skrewrite-dual-quat-snippet/game/data/shaders/rigged_mesh_vertex_shader.glsl)
 
