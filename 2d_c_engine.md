@@ -1,4 +1,4 @@
-# 2D Platformer Engine in C with Raylib
+# 2D Platformer Engine in C
 
 [Source code](source/2d_platformer/planetarium-project-snippet-for-showcasing/src)
 
@@ -18,7 +18,7 @@ I set these parameters to give tight feeling control of the player character. I'
 
 ### Sprite system loading Aseprite files
 
-<img src="files/planetarium-collision-box.PNG" alt="Collision box from aseprite" width="60%">
+<img src="files/planetarium-collision-box2.PNG" alt="Collision box from aseprite" width="60%">
 
 Entities can have a sprite state component which handles all there sprite updates in a very easy way.
 
