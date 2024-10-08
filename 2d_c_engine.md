@@ -5,8 +5,6 @@
 I made this 2D platformer game engine in C.
 Its modularly programmed so that tooling is easy. The asset pipeline is seamlessly integrated with Aseprite (a popular pixel art animation software). The program is structured in a way that is easy to expand into a full game. For this project I decided to use Raylib instead of OpenGL so I could get straight to rendering quads to the screen.
 
-I want to program and release a full length 2D story/platforming game in this way eventually since I love 2D indie games.
-
 ![Tile editor](files/planetarium-room-editor-fun.gif)
 
 | Character controller        |

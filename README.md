@@ -27,9 +27,9 @@ Voxel rendering with chunking, texture arrays and mesh-culling optimisations. My
 
 [Feel free to peruse the source code to my program here if you like some C programming like me!](source/c_blockgame_september_snippet/src)
 
-Programmed so that the Windows API layer is easy simple to port and swap with a cross-platform library. Using no libraries was great for learning. I implemented my own math library originally ([source here](source/c_blockgame_september_snippet/old_custom_math_src/src_oldcustommath/include/basic_types.h)) but swapped it out for cglm since I could trust its mathematical correctness when debugging rendering errors.
+Programmed so that the Windows API layer is straight forward to swap with a cross-platform library for Linux. Using no libraries was great for learning (hence not using GLFW). I implemented my own math library originally ([which you can see here](source/c_blockgame_september_snippet/old_custom_math_src/src_oldcustommath/include/basic_types.h)) but swapped it out for [cglm](https://github.com/recp/cglm) since I could trust its mathematical correctness when debugging rendering errors.
 
-RenderDoc and OpenGL 4.5's debugging API were very useful for GPU debugging, which I needed to do a lot of, especially when building and uploading mesh data for each voxel chunk.
+RenderDoc and OpenGL 4.5's debugging API were very useful for GPU debugging, which I needed to do a lot of, especially for building and uploading the mesh data of each voxel chunk.
 
 ## 2D Platformer Engine in C
 
@@ -50,7 +50,7 @@ At some point I want to create a full length 2D story/platforming game this way 
 
 ## Compiler for Java-like language 'Jack' written in C
 
-This project was for a University coursework, written in C using recursive-descent and it passed all testing and edge cases, receiving max marks. The input is a folder of .jack source files and outputted is Virtual Machines instructions for the Hack computer.
+This project was for a University coursework, written in C using recursive-descent and it passed all testing and edge cases, receiving max marks. The input is a folder of .jack source files and outputted is virtual machines instructions for the Hack computer.
 
 <img src="files/jack_compiler_pong.PNG" alt="My compiler's output for Nand2Tetris' Pong jack program" width="50%">
 
@@ -74,7 +74,7 @@ The community behind this jam was really great and gave lots of lovely feedback!
 ## Library Website in Python-Flask
 
 This project was for a University coursework. The site dynamically loads books from the server, has a secure log in system, book reviews and rating system, user's personal library.
-Site is accessible, for instance design was changed to be more colour-blind friendly and being checked with tools like WAVE (A web accessability evaluation tool).
+The site is accessible, for instance in an accessibility pass the colours and contrasts were adjusted to be more colour-blind friendly, and the site passed checks with WAVE (A web accessability evaluation tool).
 
 Users, Books, and Reviews are stored in a SQL database. [Here is the models python file for instance](source/library-site-source-snippet/app/models.py)
 
@@ -88,7 +88,7 @@ For the 100-hour long Extra Credits Game Jam #3 (Feb 2019), I made a grapple hoo
 
 <img src="files/astro0gameplay.gif" alt="Astro0 platformer gif" width="75%">
 
-The Godot engine founder Ariel Manzur emailed me asking if I'd like to see a build on the switch, I quickly added gamepad and touch screen controls and was overjoyed to see it running, since the Switch was quite new and I'd never even seen one in person at that point, The touch-screen controls were janky on there since it was untested.
+The Godot engine founder Ariel Manzur emailed me asking if I'd like to see a build on the switch, I quickly added gamepad and touch screen controls and was overjoyed to see it running since the Switch felt so new, I don't recall even seeing one in person at that point, The touch-screen controls were janky on there since I of course couldn't test it before sending a build over.
 
 <img src="files/Astro0onSwitch.png" alt="Astro0 on Nintendo Switch" width="75%">
 
@@ -107,9 +107,9 @@ I have many older and unfinished projects in all sorts of languages: Python, C#,
 
 ### Dual-Quaternion vertex skinning implementation I couldn't render (2020)
 
-For my A-Level Computer Science project I went for a far too challenging project for my 16 year old self but it helped me so much more in the years to come than any boring project I could've finished...
+For my A-Level Computer Science project I went for a far too challenging project for my 16 year old self but it helped me so much more in the years to come than any boring project I could've finished.
 
-I got an OpenGL 4.5 rendering working that could load obj files, and wanted to try skeletal animation. Naively I went straight to trying to implemented a more advanced technique from [this paper](https://team.inria.fr/imagine/files/2014/10/skinning_dual_quaternions.pdf) that used dual-quaternion transforms instead of matrices, and while I did learn a lot about skinning algorithms researching it. Once I had written a lot of C code for it (even doing premature optimisations like caching joint keyframes), I realised that I couldn't source assets with skeletal animations stored in such a format without writing a custom exporter for Blender. I now know better and would have just gone with the simpler algorithm until performance or rendering quality called for more.
+I got an OpenGL 4.5 rendering working that could load obj files, and I wanted to try skeletal animation. Naively after learning about the basics, I went straight to trying to implemented a more advanced technique from [this paper](https://team.inria.fr/imagine/files/2014/10/skinning_dual_quaternions.pdf) "Skinning with Dual Quaternions" that used dual-quaternion transforms instead of matrices, and while I did learn a lot about skinning algorithms researching it. Once I had written a lot of C code for it (even doing premature optimisations like caching joint keyframes), I realised that I couldn't source assets with skeletal animations stored in such a format without writing a custom exporter for Blender. I now know better and would have just gone with the simpler algorithm until performance or rendering quality called for more.
 
 See my implementation in the C header file [skeletal_animation.h](source/skrewrite-dual-quat-snippet/game/src/skeletal_animation.h) and the shader code [rigged_mesh_vertex_shader.glsl...](source/skrewrite-dual-quat-snippet/game/data/shaders/rigged_mesh_vertex_shader.glsl)
 
