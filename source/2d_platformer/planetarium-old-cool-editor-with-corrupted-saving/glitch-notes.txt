@@ -1,0 +1,1 @@
+Physics when tabbed-out with fullscreen mode causes janky physics somehow. (Player flying)

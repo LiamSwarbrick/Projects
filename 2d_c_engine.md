@@ -7,12 +7,14 @@ Its modularly programmed so that tooling is easy. The asset pipeline is seamless
 
 I want to program and release a full length 2D story/platforming game in this way eventually since I love 2D indie games.
 
-![Animation showcase](files/planetarium-animation-showcase-final.gif)
+![Tile editor](files/planetarium-room-editor-fun.gif)
 
 | Character controller        |
 |:----------------------------|
 | I made sure to get the character controller feeling good, implementing ground friction, air resistance, coyote time and control over jump height.
 I set these parameters to give tight feeling control of the player character. I've had plenty of experience releasing 2D games for game-jams, getting lots of feedback from players, and its always a good feeling player controller that people really notice!|
+
+![Animation showcase](files/planetarium-animation-showcase-final.gif)
 
 ### Sprite system loading Aseprite files
 
@@ -28,16 +30,6 @@ Directly loads the following data from Aseprite files:
 
 
 ```c
-typedef struct Sprite_Animation
-{
-    char* name;
-    int from;
-    int to;
-    int loop;
-    float total_duration;
-}
-Sprite_Animation;
-
 typedef struct Sprite
 {
     Texture2D spritesheet;
@@ -54,27 +46,15 @@ typedef struct Sprite
     Vector2 pivot;  // relative to top-left corner 
 }
 Sprite;
-
-typedef struct Sprite_State
-{
-    int current_animation;
-    int current_frame;
-    float current_animation_time;
-}
-Sprite_State;
-
-int load_sprite(const char* aseprite_path, Sprite* out);
-void unload_sprite(Sprite* sprite);
-Texture2D load_texture_aseprite(const char* aseprite_path);
-int begin_sprite_animation(Sprite* sprite, Sprite_State* state, char* name);
-int begin_or_continue_sprite_animation(Sprite* sprite, Sprite_State* state, char* name);
-void update_sprite(Sprite* sprite, Sprite_State* state, float dt);
-void draw_sprite(Sprite* sprite, Sprite_State state, Vector2 pos);
-void draw_sprite_collision(Sprite* sprite, Vector2 pos);
-
 ```
 
 ### Level creation and serialisation
+
+I needed to make a simple editor for creating the tile maps.
+You can see below the edited room is outlined. For a full game the levels/maps will be a collection of rooms (any width and height in tiles) that can be pieced together in the editor.
+Each room will have a different camera controller, and a camera transition will occur when moving to another room.
+
+![Tile editor](files/planetarium-room-editor.gif)
 
 Serialisation uses JSON and I kept it simple and clean.
 
@@ -123,9 +103,6 @@ Here's the JSON file for this room of entities and tilemap.
 }
 ```
 
-I needed to make a simple editor for creating the tile maps:
-
-![Tile editor](files/planetarium-initial-tilemap-editor.gif)
 
 ### Easy to work with entity system
 

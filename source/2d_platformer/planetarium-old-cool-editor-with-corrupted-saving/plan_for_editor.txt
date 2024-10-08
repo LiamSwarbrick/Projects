@@ -1,0 +1,28 @@
+Editor will use the same scene as the platformer mode
+it will pause all entity updates, and the player will become flying noclip (wasd - up down left right).
+The room data will be copied to editor_room, and then all editor will be done in editor_room.
+Pressing enter will save the room to the same file, copying the old version to a backup file.
+
+
+The first simple version of the editor will draw an overlay on top, like a minecraft hotbar of tiles.
+There will be a box preview of the currently hovered tile.
+
+To place entities, select an entity and click.#
+
+
+
+
+= Press tab will enter live editor mode:
+    - playing_room is copied to editor_room
+    - player becomes noclip and can fly around whilst all other entity updates are paused
+    
+= First version of editor will only have tile drawing:
+
+= Pressing tab will save the new tiles but won't modify the entities section of the json
+    - File at playing_room_filename is loaded to a temporary Room variable 'X'
+    - X is saved to playing_room_filename + ".backup"
+    - X.tilemap is replaced with editor_room.tilemap
+    - This modified X is saved to playing_room_filename
+
+
+SPACE Key to save tiles and create backup
