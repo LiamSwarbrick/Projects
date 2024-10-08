@@ -1,0 +1,12 @@
+This is to convert exchange model formats to custom format.
+https://github.com/thisistherk/fast_obj
+
+Tomorrow: Create importer for skin and bone animation thingy
+https://www.youtube.com/watch?v=F-kcaonjHf8&list=PLRIWtICgwaX2tKWCxdeB7Wv_rTET9JtWW&index=2&ab_channel=ThinMatrix
+look at gltf2.0
+look at collada and more:https://godotengine.org/article/we-should-all-use-gltf-20-export-3d-assets-game-engines
+^^^^^^^^^
+
+First implement structures for skin animation in main game then create importer
+
+NOTE: Implement SSE in all code after finishing skeletal animation

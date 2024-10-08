@@ -5,7 +5,7 @@ _Currently in my third year and looking for a summer internship_
 I am currently in my third year at the University of Leeds studying a **Meng/Bsc in Computer Science with High Performance Computer Graphics and Games Engineering**.
 I'm just starting my Bsc individual project in the field of Real-Time Rendering.
 
-Here are some of my projects, I'm passionate about computer graphics and game programming.
+Here are some of my projects, I'm passionate about **computer graphics and games engineering**. After three summer harvests farming for plant breeding companies, I shan't photosynthesize any more and am excited to work in software.
 
 - [My Projects](#my-projects)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
@@ -13,6 +13,11 @@ Here are some of my projects, I'm passionate about computer graphics and game pr
   - [Compiler for Java-like language 'Jack' written in C](#compiler-for-java-like-language-jack-written-in-c)
   - [2019 Game-Jam Winner: My Precision Platformer for the theme "One Control"](#2019-game-jam-winner-my-precision-platformer-for-the-theme-one-control)
   - [Library Website in Python-Flask](#library-website-in-python-flask)
+  - [My Godot game that ran on the Nintendo Switch](#my-godot-game-that-ran-on-the-nintendo-switch)
+  - [Snippet of my older unfinished but of interest projects](#snippet-of-my-older-unfinished-but-of-interest-projects)
+    - [A-Levels: Dual-Quaternion vertex skinning implementation I could never run](#a-levels-dual-quaternion-vertex-skinning-implementation-i-could-never-run)
+    - [Unfinished C Game-Boy Emulator (2019)](#unfinished-c-game-boy-emulator-2019)
+    - [C# Game drop-down console (2018)](#c-game-drop-down-console-2018)
 
 
 ## Voxel Game in C with OpenGL 4.5 from scratch on the Win32API
@@ -45,7 +50,7 @@ At some point I want to create a full length 2D story/platforming game this way 
 
 ## Compiler for Java-like language 'Jack' written in C
 
-This project was for a University coursework, written in C using recursive-descent and I scored max marks. The input is a folder of .jack source files and outputted is Virtual Machines instructions for the Hack computer.
+This project was for a University coursework, written in C using recursive-descent and it passed all testing and edge cases, receiving max marks. The input is a folder of .jack source files and outputted is Virtual Machines instructions for the Hack computer.
 
 <img src="files/jack_compiler_pong.PNG" alt="My compiler's output for Nand2Tetris' Pong jack program" width="50%">
 
@@ -76,6 +81,17 @@ Users, Books, and Reviews are stored in a SQL database. [Here is the models pyth
 <img src="files/libsite-bookpage.png" alt="Library website example book page" width="50%">
 <img src="files/libsite-librarypage.png" alt="Library website library page" width="50%">
 
+
+## My Godot game that ran on the Nintendo Switch
+
+For the 100-hour long Extra Credits Game Jam #3 (Feb 2019), I made a grapple hook game in the Godot Engine. I went for a game-boy style colour restriction since it was faster to make the assets that way in such a short time-span.
+
+<img src="files/astro0gameplay.gif" alt="Astro0 platformer gif" width="75%">
+
+The Godot engine founder Ariel Manzur emailed me asking if I'd like to see a build on the switch, I quickly added gamepad and touch screen controls and was overjoyed to see it running, since the Switch was quite new and I'd never even seen one in person at that point, The touch-screen controls were janky on there since it was untested.
+
+<img src="files/Astro0onSwitch.png" alt="Astro0 on Nintendo Switch" width="75%">
+
 <!-- ## C\# 2018, Game drop-down console with command processing
 
 
@@ -85,3 +101,189 @@ Users, Books, and Reviews are stored in a SQL database. [Here is the models pyth
 - OpenGL testing phong shading-
 - Unfinished skeletal animation programming (tried implementing a dual quaternion vertex skinning algorithm)
 - Game boy emulator (never finished) -->
+
+## Snippet of my older unfinished but of interest projects
+I have many older and unfinished projects in all sorts of languages: Python, C#, Haxe, Rust etc. Here's some random examples...
+
+### A-Levels: Dual-Quaternion vertex skinning implementation I could never run
+
+For my A-Level Computer Science project I went way out of my depth but it really helped me so much more years to come than any boring project I could've finished...
+
+I got an OpenGL 4.5 rendering working that could load obj files, and wanted to try skeletal animation. Naively I went straight to trying to implemented a more advanced technique from [this paper](https://team.inria.fr/imagine/files/2014/10/skinning_dual_quaternions.pdf) that used dual-quaternion transforms instead of matrices, and while I did learn a lot about skinning algorithms researching it. Once I had written a lot of C code for it (even doing premature optimisations like caching joint keyframes), I realised that I couldn't source assets with skeletal animations stored in such a format without writing a custom exporter for Blender. It did teach me to just go with the simpler algorithm unless you specifically run into a problem with it however.
+
+See my implementation in the C header file [skeletal_animation.h](source/skrewrite-dual-quat-snippet/game/src/skeletal_animation.h) and the shader code [rigged_mesh_vertex_shader.glsl...](source/skrewrite-dual-quat-snippet/game/data/shaders/rigged_mesh_vertex_shader.glsl)
+
+```c
+...  // Lots of data structure definitions
+
+typedef struct Rig_Instance
+{
+    Rig* rig;  // Stored in assets
+    Clip* current_clip;  // Points to an animation in rig->animations
+    Dual_Quaternion* current_pose;  // The interpolated pose
+    f32 clip_time;
+
+    u32* jointanim_current_keyframe_indices;  // Cache of the last used index of joint animation keyframe
+}
+Rig_Instance;
+
+static void
+repose_cached(Rig_Instance* rig_instance)
+{
+    Assert(rig_instance->current_clip != NULL);
+
+    b32 reset_cache_indices = 0;
+    if (rig_instance->current_clip->loop && rig_instance->clip_time > rig_instance->current_clip->clip_length)
+    {
+        rig_instance->clip_time = fmodf(rig_instance->clip_time, rig_instance->current_clip->clip_length);
+        reset_cache_indices = 1;
+    }
+    for (u32 i = 0; i < rig_instance->rig->skeleton->joint_count; ++i)
+    {
+        u32 cached_index = reset_cache_indices ? 0 : rig_instance->jointanim_current_keyframe_indices[i];
+        f32 joint_keyframe_timestamp_lower = rig_instance->current_clip->joint_animations[i].timestamps[cached_index];
+        f32 joint_keyframe_timestamp_higher = rig_instance->current_clip->joint_animations[i].timestamps[cached_index + 1];
+
+        u32 j;
+        for (j = cached_index; j < rig_instance->current_clip->joint_animations[i].keyframe_count; ++i)
+        {
+            f32 timestamp = rig_instance->current_clip->joint_animations[i].timestamps[j];
+            if (timestamp >= rig_instance->clip_time)
+            {
+                rig_instance->jointanim_current_keyframe_indices[i] = j;  // NOTE: Cache new index
+                joint_keyframe_timestamp_lower = timestamp;
+                
+                if (j == rig_instance->current_clip->joint_animations[i].keyframe_count - 1)
+                {
+                    joint_keyframe_timestamp_higher = timestamp;
+                    break;
+                }
+
+                joint_keyframe_timestamp_higher = rig_instance->current_clip->joint_animations[i].timestamps[j + 1];
+
+                break;
+            }
+        }
+
+        // NOTE: t is the percent between keyframe timestamps to interpolate
+        f32 t = (rig_instance->clip_time - joint_keyframe_timestamp_lower) / (joint_keyframe_timestamp_higher - joint_keyframe_timestamp_lower);
+        // Interpolate dual quaternions weighted by t*q1, (1-t)*q2  (DLB algorithm)
+        Dual_Quaternion result = dq_normalize(dq_add(dq_scale(rig_instance->current_clip->joint_animations[i].keyframes[j], t),
+                                                     dq_scale(rig_instance->current_clip->joint_animations[i].keyframes[j+1], 1.0f - t)));
+        rig_instance->current_pose[i] = result;
+    }
+}
+```
+
+```glsl
+#version 450 core
+
+... // Dual Quaternion stuff
+
+layout (location = 0) in vec3 vertex_pos;
+layout (location = 1) in vec3 vertex_normal;
+layout (location = 2) in vec4 vertex_colour;
+layout (location = 3) in vec4 vertex_uvst;
+layout (location = 4) in ivec4 joint_ids;
+layout (location = 5) in vec4 weights;
+
+out vec3 normal;
+out vec4 colour;
+out vec4 uvst;
+
+layout (location = 0) uniform mat4 mvp;
+layout (binding = 0) uniform Dual_Quaternion joint_transforms[64];
+/* EXAMPLE:
+layout (binding = 1) uniform material_buffer
+{
+    vec4 material_diffuse;
+    vec4 material_emissive;
+};*/
+
+// look at shader storage blocks: https://www.geeks3d.com/20140704/tutorial-introduction-to-opengl-4-3-shader-storage-buffers-objects-ssbo-demo/
+// glBindBufferRange(GL_SHADER_STORAGE_BUFFER, ...);
+void
+main(void)
+{
+    Dual_Quaternion b;
+    b = dq_normalize(sum_of_4_dqs(
+                      dq_scale(weights.x, joint_transforms[joint_ids.x]),
+                      dq_scale(weights.y, joint_transforms[joint_ids.y]),
+                      dq_scale(weights.z, joint_transforms[joint_ids.z]),
+                      dq_scale(weights.w, joint_transforms[joint_ids.w])
+                      ));
+
+    vec3 t = vec3( 2.0 * (-b.d.w * b.r.x + b.d.x * b.r.w - b.d.y * b.r.z + b.d.z * b.r.y),
+               2.0 * (-b.d.w * b.r.y + b.d.x * b.r.z + b.d.y * b.r.w - b.d.z * b.r.x),
+               2.0 * (-b.d.w * b.r.z + b.d.x * b.r.y + b.d.y * b.r.x + b.d.z * b.r.w) );
+    
+    mat4 m;
+    float xx = 2 * b.r.x * b.r.x;
+    float yy = 2 * b.r.y * b.r.y;
+    float zz = 2 * b.r.z * b.r.z;
+    float xy = 2 * b.r.x * b.r.y;
+    float wz = 2 * b.r.w * b.r.z;
+    float xz = 2 * b.r.x * b.r.z;
+    float wy = 2 * b.r.w * b.r.y;
+    float yz = 2 * b.r.y * b.r.z;
+    float wx = 2 * b.r.w * b.r.x;
+    m[0][0] = 1 - yy - zz;
+    m[0][1] = xy + wz;
+    m[0][2] = xz - wy;
+    m[1][0] = xy - wz;
+    m[1][1] = 1 - xx - zz;
+    m[1][2] = yz + wx;
+    m[2][0] = xz + wy;
+    m[2][1] = yz - wx;
+    m[2][2] = 1 - xx - yy;
+    m[3] = vec4(t, 1.0);
+
+    vec4 new_position = m * vec4(vertex_pos, 1.0);
+    vec4 new_normal = m * vec4(vertex_normal, 0.0);
+
+    gl_Position = mvp * new_position;
+    normal = new_normal;
+    colour = vertex_colour;
+    uvst = vertex_uvst;
+}
+```
+
+### Unfinished C Game-Boy Emulator (2019)
+
+I spent a lot of time being excited by old game console emulation, but never had the time to implement all the instructions for the Game-Boy's processor. I intend to try some more emulator development in the future.
+
+<img src="files/nanogb-github.PNG" width="50%">
+
+```c
+typedef u8 MMU[0xFFFF];
+
+// cpu (Sharp LR35902 core @ 4.19 MHz, similar to the Z80)
+typedef struct CPU
+{
+    union { struct { u8 f; u8 a; }; u16 af; };  // A, F
+    union { struct { u8 c; u8 b; }; u16 bc; };  // B, C
+    union { struct { u8 e; u8 d; }; u16 de; };  // D, E
+    union { struct { u8 l; u8 h; }; u16 hl; };  // H, L
+    u16 pc;  // program counter
+    u16 sp;  // stack pointer
+
+    MMU mmu;  // MMU used to map virtual addresses with physical addresses
+
+    u64 t_clock;  // every machine cycle takes exactly 4 T states
+    u8 delta_t_clock;  // cycles for last instrution
+    
+    struct
+    {
+        u16 mode;
+        u16 mode_clock;
+        u16 line;  // current scanline
+    } video;
+}
+CPU;
+```
+
+### C\# Game drop-down console (2018)
+
+Made in C# and Raylib, command processing was implemented after this old video, intended to be used for game debugging.
+
+<img src="files/csharp-drop-down-console.gif" width="75%">

@@ -1,0 +1,1 @@
+the game folder generated here is a side effect of wanting texture paths in export to say: "game/data/textures"
