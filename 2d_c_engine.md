@@ -1,4 +1,4 @@
-# 2D Platformer Engine in C
+# 2D Platformer Engine in C with Raylib
 
 [Source code](source/2d_platformer/planetarium-project-snippet-for-showcasing/src)
 

@@ -6,10 +6,10 @@ I am currently in my third year at the **University of Leeds** studying a **MEng
 I'm just starting my BSc third-year project in the field of Real-Time Rendering.
 
 Here are some of my projects, I'm passionate about **computer graphics and games engineering**. After three summer harvests farming for plant breeding companies, I shan't photosynthesize any more and am excited to work in software.
-
+****
 - [My Projects](#my-projects)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
-  - [2D Platformer Engine in C](#2d-platformer-engine-in-c)
+  - [2D Platformer Engine in C with Raylib](#2d-platformer-engine-in-c-with-raylib)
   - [Compiler for Java-like language 'Jack' written in C](#compiler-for-java-like-language-jack-written-in-c)
   - [2019 Game-Jam Winner: My Precision Platformer for the theme "One Control"](#2019-game-jam-winner-my-precision-platformer-for-the-theme-one-control)
   - [Library Website in Python-Flask](#library-website-in-python-flask)
@@ -31,7 +31,7 @@ Programmed so that the Windows API layer is straight forward to swap with a cros
 
 RenderDoc and OpenGL 4.5's debugging API were very useful for GPU debugging, which I needed to do a lot of, especially for building and uploading the mesh data of each voxel chunk.
 
-## 2D Platformer Engine in C
+## 2D Platformer Engine in C with Raylib
 
 ![Cropped Gameplay of my 2D platformer engine](files/planetarium-camera-and-entities-cropped.gif)
 <img src="files/planetarium-collision-box.PNG" alt="Collision box from aseprite" width="33%">
