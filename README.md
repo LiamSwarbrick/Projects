@@ -85,6 +85,7 @@ Users, Books, and Reviews are stored in a SQL database. [Here is the models pyth
 ## My Godot game that ran on the Nintendo Switch
 
 For the 100-hour long Extra Credits Game Jam #3 (Feb 2019), I made a grapple hook game in the Godot Engine. I went for a game-boy style colour restriction since it was faster to make the assets that way in such a short time-span.
+_Since 2019 to the time of writing this, it should still be on [liamswarbrick.github.io](https://liamswarbrick.github.io), an updated version at least, which is slightly longer (but without the end screen) and slightly tighter controls than the original downloadable version._
 
 <img src="files/astro0gameplay.gif" alt="Astro0 platformer gif" width="75%">
 
