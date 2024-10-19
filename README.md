@@ -251,7 +251,7 @@ main(void)
 
 ### Unfinished C Game-Boy Emulator (2019)
 
-I spent a lot of time being excited by old game console emulation, but never had the time to implement all the instructions for the Game-Boy's processor. I intend to try some more emulator development in the future.
+I was very interested in game console emulation, but never finished implementing all the instructions for the Game-Boy's processor. I'll definitely do some more emulator development in the future.
 
 <img src="files/nanogb-github.PNG" width="50%">
 
