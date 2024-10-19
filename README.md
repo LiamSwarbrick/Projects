@@ -52,7 +52,7 @@ At some point I want to create a full length 2D story/platforming game this way 
 
 This project was for a University coursework, written in C using recursive-descent and it passed all testing and edge cases, receiving max marks. The input is a folder of .jack source files and compiles to virtual machine code for the Hack computer.
 
-<img src="files/jack_compiler_pong.PNG" alt="My compiler's output for Nand2Tetris' Pong jack program" width="50%">
+<img src="files/jack_compiler_pong.PNG" alt="My compiler's output for Nand2Tetris' Pong jack program" width="75%">
 
 ## 2019 Game-Jam Winner: My Precision Platformer for the theme "One Control"
 
