@@ -5,7 +5,7 @@ _Looking for a summer internship_
 I am currently in my third year at the **University of Leeds** studying a **MEng/BSc in Computer Science with High Performance Computer Graphics and Games Engineering**.
 I'm just starting my BSc third-year project in the field of Real-Time Rendering.
 
-Here are some of my projects, I'm passionate about **computer graphics and games engineering**. After three summer harvests farming for plant breeding companies, I shan't photosynthesize any more and am excited to work in software.
+Here are some of my projects; I'm passionate about **computer graphics and games engineering**. After three summer harvests farming for plant breeding companies, I shan't photosynthesize any more and am excited to work in software.
 ****
 - [My Projects](#my-projects)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
@@ -50,7 +50,7 @@ At some point I want to create a full length 2D story/platforming game this way 
 
 ## Compiler for Java-like language 'Jack' written in C
 
-This project was for a University coursework, written in C using recursive-descent and it passed all testing and edge cases, receiving max marks. The input is a folder of .jack source files and outputted is virtual machines instructions for the Hack computer.
+This project was for a University coursework, written in C using recursive-descent and it passed all testing and edge cases, receiving max marks. The input is a folder of .jack source files and compiles to virtual machine code for the Hack computer.
 
 <img src="files/jack_compiler_pong.PNG" alt="My compiler's output for Nand2Tetris' Pong jack program" width="50%">
 
