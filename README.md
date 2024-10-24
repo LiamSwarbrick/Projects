@@ -1,11 +1,11 @@
 # My Projects
 **Liam Swarbrick**  
-_Looking for a summer internship_
+_Looking for a summer internship / summer job_
 
 I am currently in my third year at the **University of Leeds** studying a **MEng/BSc in Computer Science with High Performance Computer Graphics and Games Engineering**.
 I'm just starting my BSc third-year project in the field of Real-Time Rendering.
 
-Here are some of my projects; I'm passionate about **computer graphics and games engineering**. After three summer harvests farming for plant breeding companies, I shan't photosynthesize any more and am excited to work in software.
+Here are some of my projects; I'm passionate about **computer graphics and games engineering**. After three summer harvests farming for plant breeders, I shan't photosynthesize any more and look forward to working in computers.
 ****
 - [My Projects](#my-projects)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
@@ -78,8 +78,8 @@ The site is accessible, for instance in an accessibility pass the colours and co
 
 Users, Books, and Reviews are stored in a SQL database. [Here is the models python file for instance](source/library-site-source-snippet/app/models.py)
 
-<img src="files/libsite-bookpage.png" alt="Library website example book page" width="50%">
-<img src="files/libsite-librarypage.png" alt="Library website library page" width="50%">
+<img src="files/libsite-bookpage.png" alt="Library website example book page" width="75%">
+<img src="files/libsite-librarypage.png" alt="Library website library page" width="75%">
 
 
 ## My Godot game that ran on the Nintendo Switch
