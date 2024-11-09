@@ -6,14 +6,9 @@ I am currently in my third year at the **University of Leeds** studying a **MEng
 
 Here are some of my projects; I'm passionate about **computer graphics and games engineering**. After three summer harvests farming for plant breeders, I shan't photosynthesize any more and look forward to working in computers.
 
-I'm at the early stages of my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**, I'm developing my own OpenGL 4.6 renderer for it in C and am currently working on rendering glTF scene files which now I just need to implement PBR materials for.
-Once that is done I will work on area lights - which are physically based polygonal lights, and I will design a way to assign them to spatial clusters in order to integrate clustered shading which will drastically reduce the large GPU throughput that comes from forward rendering lots of lights and thus render scenes with potentially thousands of these lights in real-time.
-
-<img src="files/9nov2024-gltf_with_normals.PNG">
-<img src="files/9nov2024-gltf_with_simplest-brdf.PNG" width=50%>
-
 ****
 - [My Projects](#my-projects)
+  - [Thesis: "Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
   - [2D Platformer Engine in C with Raylib](#2d-platformer-engine-in-c-with-raylib)
   - [Compiler for Java-like language 'Jack' written in C](#compiler-for-java-like-language-jack-written-in-c)
@@ -25,6 +20,13 @@ Once that is done I will work on area lights - which are physically based polygo
     - [Unfinished C Game-Boy Emulator (2019)](#unfinished-c-game-boy-emulator-2019)
     - [C# Game drop-down console (2018)](#c-game-drop-down-console-2018)
 
+
+## Thesis: "Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"
+I've begun my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**, I'm developing my own OpenGL 4.6 renderer for it in C and am currently working on rendering glTF scene files which now I just need to implement PBR materials for.
+Once that is done I will work on area lights - which are physically based polygonal lights, and I will design a way to assign them to spatial clusters in order to integrate clustered shading which will drastically reduce the large GPU throughput that comes from forward rendering lots of lights and thus render scenes with potentially thousands of these lights in real-time.
+
+<img src="files/9nov2024-gltf_with_normals.PNG">
+<img src="files/9nov2024-gltf_with_simplest-brdf.PNG" width=50%>
 
 ## Voxel Game in C with OpenGL 4.5 from scratch on the Win32API
 ![Early screenshot from my voxel game](files/blockgame-early-screenshot.PNG)
