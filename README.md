@@ -3,9 +3,15 @@
 _Looking for a summer internship / summer job_
 
 I am currently in my third year at the **University of Leeds** studying a **MEng/BSc in Computer Science with High Performance Computer Graphics and Games Engineering**.
-I'm just starting my BSc third-year project in the field of Real-Time Rendering.
 
 Here are some of my projects; I'm passionate about **computer graphics and games engineering**. After three summer harvests farming for plant breeders, I shan't photosynthesize any more and look forward to working in computers.
+
+I'm at the early stages of my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**, I'm developing my own OpenGL 4.6 renderer for it in C and am currently working on rendering glTF scene files which now I just need to implement PBR materials for.
+Once that is done I will work on area lights - which are physically based polygonal lights, and I will design a way to assign them to spatial clusters in order to integrate clustered shading which will drastically reduce the large GPU throughput that comes from forward rendering lots of lights and thus render scenes with potentially thousands of these lights in real-time.
+
+<img src="files/9nov2024-gltf_with_normals.PNG">
+<img src="files/9nov2024-gltf_with_simplest-brdf.PNG" width=50%>
+
 ****
 - [My Projects](#my-projects)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
@@ -23,9 +29,11 @@ Here are some of my projects; I'm passionate about **computer graphics and games
 ## Voxel Game in C with OpenGL 4.5 from scratch on the Win32API
 ![Early screenshot from my voxel game](files/blockgame-early-screenshot.PNG)
 
-Voxel rendering with chunking, texture arrays and mesh-culling optimisations. My most recent project so it's at an early stage. I intend to add proper world generation, and need to add a faster chunk hashing system.
+Voxel rendering with 3D chunking, texture arrays and mesh-culling optimisations. My most recent project so it's at an early stage. I intend to add proper world generation, and need to add a faster chunk hashing system.
 
-[Feel free to peruse the source code to my program here if you like some C programming like me!](source/c_blockgame_september_snippet/src)
+My 3D chunk storage allows infinite height worlds which opens up more interesting world generation possibilities - sky islands, planets, deep sea trenches, the possibilities are endless.
+
+[Feel free to peruse the source code to my program here if you also like some C programming](source/c_blockgame_september_snippet/src)
 
 Programmed so that the Windows API layer is straight forward to swap with a cross-platform library for Linux. Using no libraries was great for learning (hence not using GLFW). I implemented my own math library originally ([which you can see here](source/c_blockgame_september_snippet/old_custom_math_src/src_oldcustommath/include/basic_types.h)) but swapped it out for [cglm](https://github.com/recp/cglm) since I could trust its mathematical correctness when debugging rendering errors.
 
