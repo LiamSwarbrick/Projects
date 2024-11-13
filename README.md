@@ -11,8 +11,8 @@ Here are some of my projects; I'm passionate about **computer graphics and games
 ****
 - [My Projects](#my-projects)
   - [Thesis "Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer" Progress Update](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer-progress-update)
-      - [DONE: Custom C OpenGL 4.6 glTF scene renderer PBR Base Color only](#done-custom-c-opengl-46-gltf-scene-renderer-pbr-base-color-only)
-      - [Ongoing: PBR Metallic roughness, Area Lights, Clustered Shading, Area light assignment algorithm](#ongoing-pbr-metallic-roughness-area-lights-clustered-shading-area-light-assignment-algorithm)
+      - [DONE: Custom C OpenGL 4.6 glTF scene renderer. Implemented PBR-metallic-roughness BDRF (Bidirectional reflectance distribution function) and emissive textures.](#done-custom-c-opengl-46-gltf-scene-renderer-implemented-pbr-metallic-roughness-bdrf-bidirectional-reflectance-distribution-function-and-emissive-textures)
+      - [Ongoing: Occlusion and normal maps. Area lights. Clustered Shading. Area light assignment algorithm.](#ongoing-occlusion-and-normal-maps-area-lights-clustered-shading-area-light-assignment-algorithm)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
   - [2D Platformer Engine in C with Raylib](#2d-platformer-engine-in-c-with-raylib)
   - [Compiler for Java-like language 'Jack' written in C](#compiler-for-java-like-language-jack-written-in-c)
@@ -27,18 +27,19 @@ Here are some of my projects; I'm passionate about **computer graphics and games
 
 ## Thesis "Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer" Progress Update
 
-This october/november I've begun my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**, I'm developing my own OpenGL 4.6 renderer for it in C and am currently working on rendering glTF scene files with a PBR renderer.
+This November I've begun my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**, I'm developing my own OpenGL 4.6 renderer for it in C and you can see my progress on my project so far below...
 
-Once that is done I will work on area lights - which are physically based polygonal lights, and I will design a way to assign them to spatial clusters in order to integrate clustered shading which will drastically reduce the large GPU throughput that comes from forward rendering lots of lights and thus render scenes with potentially thousands of these lights in real-time.
+Area lights are physically-based polygonal lights, and I will design a way to assign them to spatial clusters in order to integrate clustered shading which will drastically reduce the large GPU throughput that comes from forward rendering lots of lights and thus render scenes with potentially thousands of these lights in real-time.
 
-#### DONE: Custom C OpenGL 4.6 glTF scene renderer PBR Base Color only
+#### DONE: Custom C OpenGL 4.6 glTF scene renderer. Implemented PBR-metallic-roughness BDRF (Bidirectional reflectance distribution function) and emissive textures.
 
 Output radiance is gamma-corrected to sRGB from linear color-space as it should be. Textures that represent color are converted from sRGB to linear space on load with `GL_SRGB8_ALPHA8`.
 
-<img src="files/12nov-sponza-basecolor-simple-diffuse-directional-(smallpng).PNG">
-<img src="files/9nov2024-gltf_with_normals.PNG" width=50%>
+<img src="files/13nov-added-ambient-0-halfres.PNG">
+<img src="files/13nov-added-ambient-halfres.PNG" width = 48%>
+<img src="files/13nov-helmet-pbr-halfres.PNG" width=50%>
 
-#### Ongoing: PBR Metallic roughness, Area Lights, Clustered Shading, Area light assignment algorithm
+#### Ongoing: Occlusion and normal maps. Area lights. Clustered Shading. Area light assignment algorithm.
 
 ## Voxel Game in C with OpenGL 4.5 from scratch on the Win32API
 ![Early screenshot from my voxel game](files/blockgame-early-screenshot.PNG)
