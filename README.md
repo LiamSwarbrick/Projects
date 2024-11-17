@@ -6,7 +6,7 @@ I am currently in my third year at the **University of Leeds** studying a **MEng
 
 I'm actively developing my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**. [(Progress update below.)](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer-progress-update)
 
-Here are some of my projects; I'm passionate about **computer graphics and games engineering**. After three summer harvests farming for plant breeders, I have completed photosynthesis and look forward to working in computers.
+Here are some of my projects; I'm passionate about **computer graphics and games engineering**. After three summer harvests farming for plant breeders, I shan't photosynthesize any more and look forward to working in computers.
 
 ****
 - [My Projects](#my-projects)
