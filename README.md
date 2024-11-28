@@ -36,8 +36,10 @@ Area lights are physically-based polygonal lights, and I will design a way to as
 Output radiance is gamma-corrected to sRGB from linear color-space as it should be. Textures that represent color (base and emissive maps) are converted from sRGB to linear space on load with `GL_SRGB8_ALPHA8`.
 Renderer also implements emissive textures, occlusion maps and normal maps.
 
-<img src="files/13nov-added-ambient-0-halfres.PNG">
-<img src="files/13nov-added-ambient-halfres.PNG" width = 48%>
+<!-- <img src="files/13nov-added-ambient-0-halfres.PNG"> -->
+<img src="files/28nov-progress-normal-mapping.PNG">
+<img src="files/28nov-normal-mapping-working.PNG">
+<img src="files/28nov-nmapping-with-shinies.png" width = 48%>
 <img src="files/13nov-helmet-pbr-halfres.PNG" width=50%>
 
 #### Ongoing: Area lights. Clustered Shading. Area light assignment algorithm.
