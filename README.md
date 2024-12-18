@@ -11,7 +11,7 @@ Here are some of my projects; I'm passionate about **computer graphics and games
 ****
 - [My Projects](#my-projects)
   - [Thesis "Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer" Progress Update](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer-progress-update)
-      - [DONE: Custom C OpenGL 4.6 glTF renderer. Implemented PBR-metallic-roughness BDRF (Bidirectional reflectance distribution function) and other PBR maps like normal mapping.](#done-custom-c-opengl-46-gltf-renderer-implemented-pbr-metallic-roughness-bdrf-bidirectional-reflectance-distribution-function-and-other-pbr-maps-like-normal-mapping)
+      - [DONE: Custom C OpenGL 4.6 glTF renderer. Implemented PBR-metallic-roughness BDRF (Bidirectional reflectance distribution function) and other PBR maps like normal mapping. Point Lights and Directional light.](#done-custom-c-opengl-46-gltf-renderer-implemented-pbr-metallic-roughness-bdrf-bidirectional-reflectance-distribution-function-and-other-pbr-maps-like-normal-mapping-point-lights-and-directional-light)
       - [Ongoing: Area lights. Clustered Shading. Area light assignment algorithm.](#ongoing-area-lights-clustered-shading-area-light-assignment-algorithm)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
   - [2D Platformer Engine in C with Raylib](#2d-platformer-engine-in-c-with-raylib)
@@ -31,16 +31,20 @@ This November I've begun my thesis project **"Integrating Linearly-Transformed C
 
 Area lights are physically-based polygonal lights, and I will design a way to assign them to spatial clusters in order to integrate clustered shading which will drastically reduce the large GPU throughput that comes from forward rendering lots of lights and thus render scenes with potentially thousands of these lights in real-time.
 
-#### DONE: Custom C OpenGL 4.6 glTF renderer. Implemented PBR-metallic-roughness BDRF (Bidirectional reflectance distribution function) and other PBR maps like normal mapping.
+#### DONE: Custom C OpenGL 4.6 glTF renderer. Implemented PBR-metallic-roughness BDRF (Bidirectional reflectance distribution function) and other PBR maps like normal mapping. Point Lights and Directional light.
 
 Output radiance is gamma-corrected to sRGB from linear color-space as it should be. Textures that represent color (base and emissive maps) are converted from sRGB to linear space on load with `GL_SRGB8_ALPHA8`.
 Renderer also implements emissive textures, occlusion maps and normal maps.
 
 <!-- <img src="files/13nov-added-ambient-0-halfres.PNG"> -->
-<img src="files/28nov-progress-normal-mapping.PNG">
-<img src="files/28nov-normal-mapping-working.PNG">
-<img src="files/28nov-nmapping-with-shinies.png" width = 48%>
+<!-- <img src="files/28nov-progress-normal-mapping.PNG"> -->
+<img src="files/7dec-point-light-initial-testing.PNG">
+<!-- <img src="files/28nov-normal-mapping-working.PNG"> -->
+<!-- <img src="files/28nov-nmapping-with-shinies.png" width = 48%> -->
 <img src="files/13nov-helmet-pbr-halfres.PNG" width=50%>
+An early version looked like...
+<img src="files/11nov-basecolor-texture-not-properly-working-initially.PNG", width=50%>
+
 
 #### Ongoing: Area lights. Clustered Shading. Area light assignment algorithm.
 
