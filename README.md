@@ -39,6 +39,7 @@ Renderer also implements emissive textures, occlusion maps and normal maps.
 <!-- <img src="files/13nov-added-ambient-0-halfres.PNG"> -->
 <!-- <img src="files/28nov-progress-normal-mapping.PNG"> -->
 <img src="files/7dec-point-light-initial-testing.PNG">
+<img src="files/18dec-screenshot.PNG">
 <!-- <img src="files/28nov-normal-mapping-working.PNG"> -->
 <!-- <img src="files/28nov-nmapping-with-shinies.png" width = 48%> -->
 <img src="files/13nov-helmet-pbr-halfres.PNG" width=50%>
