@@ -39,12 +39,13 @@ Renderer also implements emissive textures, occlusion maps and normal maps.
 <!-- <img src="files/13nov-added-ambient-0-halfres.PNG"> -->
 <!-- <img src="files/28nov-progress-normal-mapping.PNG"> -->
 <img src="files/7dec-point-light-initial-testing.PNG">
-<img src="files/18dec-screenshot.PNG">
+<img src="files/19dec-100point_lights-shinyUntitled.png" width=50%>
+<img src="files/18dec-screenshot.PNG" width=49%>
 <!-- <img src="files/28nov-normal-mapping-working.PNG"> -->
 <!-- <img src="files/28nov-nmapping-with-shinies.png" width = 48%> -->
+<img src="files/11nov-basecolor-texture-not-properly-working-initially.PNG", width=49%>
 <img src="files/13nov-helmet-pbr-halfres.PNG" width=50%>
-An early version looked like...
-<img src="files/11nov-basecolor-texture-not-properly-working-initially.PNG", width=50%>
+Early version^
 
 
 #### Ongoing: Area lights. Clustered Shading. Area light assignment algorithm.
