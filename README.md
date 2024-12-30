@@ -65,8 +65,8 @@ Hundreds of lights running only on laptop with integrated graphics.
 | 1fps (completely unplayable) ![No clustered shading example, 1fps](files/30dec-testlosttemple-clusteroff.PNG) | 16fps (massive improvement) ![Clustered shading example, 16fps](files/30dec-testlosttemple-clusteron.PNG) |
 
 #### Renderer Development Progress
-Full-width images to showcase major milestones:
 
+Cluster visualization: Warmer clusters have more lights in them. 
 ![Heatmap Off - Sun Temple](files/30dec-heatmapoff-suntemple2.png)
 ![Heatmap On - Sun Temple](files/30dec-heatmap-suntemple2.png)
 ![Point Light Testing](files/7dec-point-light-initial-testing.PNG)
