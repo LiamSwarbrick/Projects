@@ -10,9 +10,14 @@ Here are some of my projects; I'm passionate about **computer graphics and games
 
 ****
 - [My Projects](#my-projects)
-  - [Thesis "Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer" Progress Update](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer-progress-update)
-      - [DONE: Custom C OpenGL 4.6 glTF renderer. Implemented PBR-metallic-roughness BDRF (Bidirectional reflectance distribution function) and other PBR maps like normal mapping. Point Lights and Directional light.](#done-custom-c-opengl-46-gltf-renderer-implemented-pbr-metallic-roughness-bdrf-bidirectional-reflectance-distribution-function-and-other-pbr-maps-like-normal-mapping-point-lights-and-directional-light)
-      - [Ongoing: Area lights. Clustered Shading. Area light assignment algorithm.](#ongoing-area-lights-clustered-shading-area-light-assignment-algorithm)
+  - [Thesis Progress: "Integrating Linearly-Transformed Cosine Based Area Lights into a Clustered Forward Renderer"](#thesis-progress-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer)
+    - [Highlights](#highlights)
+      - [Completed Features:](#completed-features)
+      - [Ongoing Work:](#ongoing-work)
+    - [Key Results](#key-results)
+      - [Performance Comparison: Clustered Shading](#performance-comparison-clustered-shading)
+      - [Renderer Development Progress](#renderer-development-progress)
+  - [Early version^](#early-version)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
   - [2D Platformer Engine in C with Raylib](#2d-platformer-engine-in-c-with-raylib)
   - [Compiler for Java-like language 'Jack' written in C](#compiler-for-java-like-language-jack-written-in-c)
@@ -25,30 +30,53 @@ Here are some of my projects; I'm passionate about **computer graphics and games
     - [C# Game drop-down console (2018)](#c-game-drop-down-console-2018)
 
 
-## Thesis "Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer" Progress Update
+## Thesis Progress: "Integrating Linearly-Transformed Cosine Based Area Lights into a Clustered Forward Renderer"
 
-This November I've begun my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**, I'm developing my own OpenGL 4.6 renderer for it in C and you can see my progress on my project so far below...
+<img src="files/30dec-heatmapoff-suntemple.png" width="49%"> <img src="files/30dec-heatmap-suntemple.png" width="49%">
 
-Area lights are physically-based polygonal lights, and I will design a way to assign them to spatial clusters in order to integrate clustered shading which will drastically reduce the large GPU throughput that comes from forward rendering lots of lights and thus render scenes with potentially thousands of these lights in real-time.
+This November 2024, I began my thesis project **"Integrating Linearly-Transformed Cosine Based Area Lights into a Clustered Forward Renderer"**. I'm developing a custom OpenGL 4.6 renderer in C. Below is a snapshot of my progress so far:
 
-#### DONE: Custom C OpenGL 4.6 glTF renderer. Implemented PBR-metallic-roughness BDRF (Bidirectional reflectance distribution function) and other PBR maps like normal mapping. Point Lights and Directional light.
+---
 
-Output radiance is gamma-corrected to sRGB from linear color-space as it should be. Textures that represent color (base and emissive maps) are converted from sRGB to linear space on load with `GL_SRGB8_ALPHA8`.
-Renderer also implements emissive textures, occlusion maps and normal maps.
+### Highlights
 
-<!-- <img src="files/13nov-added-ambient-0-halfres.PNG"> -->
-<!-- <img src="files/28nov-progress-normal-mapping.PNG"> -->
-<img src="files/7dec-point-light-initial-testing.PNG">
-<img src="files/19dec-100point_lights-shinyUntitled.png" width=50%>
-<img src="files/18dec-screenshot.PNG" width=49%>
-<!-- <img src="files/28nov-normal-mapping-working.PNG"> -->
-<!-- <img src="files/28nov-nmapping-with-shinies.png" width = 48%> -->
-<img src="files/11nov-basecolor-texture-not-properly-working-initially.PNG", width=49%>
-<img src="files/13nov-helmet-pbr-halfres.PNG" width=50%>
+#### Completed Features:
+- **Custom glTF Physically-Based Renderer**:
+  - Full PBR support including dynamic lights, emissive textures, occlusion maps, normal mapping, and alpha blending with depth sorting.
+  - Compatible with way too many glTF files, its became quite a complete renderer.
+
+- **Clustered Shading Implementation**:
+  - Utilizes a compute shaders to divide view space into voxel clusters and then another compute shader to bruteforce assign the lights to clusters.
+  - Provides massive performance boosts with scenes featuring many dynamic lights.
+
+#### Ongoing Work:
+- Area Lights with Clustered Shading integration.
+- Area light assignment algorithms.
+- Investigating a good way to handle strongly specular materials in clustered shading.
+- Maybe Order-Independent Transparency to handle glTF files with transparent objects batched into one draw call..
+
+---
+
+### Key Results
+
+#### Performance Comparison: Clustered Shading
+Hundreds of lights running only on laptop with integrated graphics.
+| Without Clustered Shading | With Clustered Shading |
+|---------------------------|-------------------------|
+| 1fps (completely unplayable) ![No clustered shading example, 1fps](files/30dec-testlosttemple-clusteroff.PNG) | 16fps (massive improvement) ![Clustered shading example, 16fps](files/30dec-testlosttemple-clusteron.PNG) |
+
+#### Renderer Development Progress
+Full-width images to showcase major milestones:
+
+![Heatmap Off - Sun Temple](files/30dec-heatmapoff-suntemple2.png)
+![Heatmap On - Sun Temple](files/30dec-heatmap-suntemple2.png)
+![Point Light Testing](files/7dec-point-light-initial-testing.PNG)
+
+<img src="files/22dec-blendtest.PNG" width="49%"> <img src="files/19dec-100point_lights-shinyUntitled.png" width="49%">
+<img src="files/18dec-screenshot.PNG" width="49%"> <img src="files/28dec-cool.PNG">
+<img src="files/13nov-helmet-pbr-halfres.PNG" width=50%> <img src="files/13nov-helmet-pbr-halfres.PNG" width="49%">
 Early version^
-
-
-#### Ongoing: Area lights. Clustered Shading. Area light assignment algorithm.
+---
 
 ## Voxel Game in C with OpenGL 4.5 from scratch on the Win32API
 ![Early screenshot from my voxel game](files/blockgame-early-screenshot.PNG)
