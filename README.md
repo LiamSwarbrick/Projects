@@ -17,7 +17,6 @@ Here are some of my projects; I'm passionate about **computer graphics and games
     - [Key Results](#key-results)
       - [Performance Comparison: Clustered Shading](#performance-comparison-clustered-shading)
       - [Renderer Development Progress](#renderer-development-progress)
-  - [Early version^](#early-version)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
   - [2D Platformer Engine in C with Raylib](#2d-platformer-engine-in-c-with-raylib)
   - [Compiler for Java-like language 'Jack' written in C](#compiler-for-java-like-language-jack-written-in-c)
@@ -73,9 +72,10 @@ Full-width images to showcase major milestones:
 ![Point Light Testing](files/7dec-point-light-initial-testing.PNG)
 
 <img src="files/22dec-blendtest.PNG" width="49%"> <img src="files/19dec-100point_lights-shinyUntitled.png" width="49%">
-<img src="files/18dec-screenshot.PNG" width="49%"> <img src="files/28dec-cool.PNG">
-<img src="files/13nov-helmet-pbr-halfres.PNG" width=50%> <img src="files/13nov-helmet-pbr-halfres.PNG" width="49%">
+<img src="files/18dec-screenshot.PNG" width="49%"> <img src="files/28dec-cool.PNG" width="49%">
+<img src="files/11nov-basecolor-texture-not-properly-working-initially.PNG" width="49%"> <img src="files/13nov-helmet-pbr-halfres.PNG" width="49%">
 Early version^
+
 ---
 
 ## Voxel Game in C with OpenGL 4.5 from scratch on the Win32API
