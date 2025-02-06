@@ -62,7 +62,7 @@ This November 2024, I began my thesis project **"Integrating Linearly-Transforme
 Hundreds of lights running only on laptop with integrated graphics.
 | Without Clustered Shading | With Clustered Shading |
 |---------------------------|-------------------------|
-| 1fps (completely unplayable) ![No clustered shading example, 1fps](files/30dec-testlosttemple-clusteroff.PNG) | 16fps (massive improvement) ![Clustered shading example, 16fps](files/30dec-testlosttemple-clusteron.PNG) |
+| completely unplayable ![No clustered shading example, 1fps](files/30dec-testlosttemple-clusteroff.PNG) | 16 times faster ![Clustered shading example, 16fps](files/30dec-testlosttemple-clusteron.PNG) |
 
 #### Renderer Development Progress
 
