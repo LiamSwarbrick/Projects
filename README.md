@@ -11,12 +11,8 @@ Here are some of my projects; I'm passionate about **computer graphics and games
 ****
 - [My Projects](#my-projects)
   - [Thesis Progress: "Integrating Linearly-Transformed Cosine Based Area Lights into a Clustered Forward Renderer"](#thesis-progress-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer)
-    - [Highlights](#highlights)
       - [Completed Features:](#completed-features)
       - [Ongoing Work:](#ongoing-work)
-    - [Key Results](#key-results)
-      - [Performance Comparison: Clustered Shading](#performance-comparison-clustered-shading)
-      - [Renderer Development Progress](#renderer-development-progress)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
   - [2D Platformer Engine in C with Raylib](#2d-platformer-engine-in-c-with-raylib)
   - [Compiler for Java-like language 'Jack' written in C](#compiler-for-java-like-language-jack-written-in-c)
@@ -31,45 +27,52 @@ Here are some of my projects; I'm passionate about **computer graphics and games
 
 ## Thesis Progress: "Integrating Linearly-Transformed Cosine Based Area Lights into a Clustered Forward Renderer"
 
-<img src="files/30dec-heatmapoff-suntemple.png" width="49%"> <img src="files/30dec-heatmap-suntemple.png" width="49%">
-
 This November 2024, I began my thesis project **"Integrating Linearly-Transformed Cosine Based Area Lights into a Clustered Forward Renderer"**. I'm developing a custom OpenGL 4.6 renderer in C. Below is a snapshot of my progress so far:
 
----
+<!-- <img src="files/30dec-heatmapoff-suntemple.png" width="49%"> <img src="files/30dec-heatmap-suntemple.png" width="49%"> -->
 
-### Highlights
+<img src="files/15feb-showing-ltc-area-light.PNG" width="100%">
+<img src="files/15feb-pentagonsmall.PNG" width="49%">
+<img src="files/18jan-nothing-new-6.PNG", width="49%">
+<img src="files/18jan-nothing-new-5.PNG", width="48%">
+<img src="files/18jan-nothing-new-4.PNG", width="49%">
+
+---
 
 #### Completed Features:
 - **Custom glTF Physically-Based Renderer**:
   - Full PBR support including dynamic lights, emissive textures, occlusion maps, normal mapping, and alpha blending with depth sorting.
   - Compatible with way too many glTF files, its became quite a complete renderer.
 
-- **Clustered Shading Implementation**:
-  - Utilizes a compute shaders to divide view space into voxel clusters and then another compute shader to bruteforce assign the lights to clusters.
+- **Light Culling with Clustered Shading**:
+  - First compute shader divides the view space into voxel clusters and then another compute shader performs bruteforce light assignment to clusters.
   - Provides massive performance boosts with scenes featuring many dynamic lights.
 
+- **Linearly Transformed Cosine based Area lights**:
+  - Physically based rendering of area light as per Heitz. et al. that supports any non-convex polygon by transforming the closed-form lambertian (perfect diffuse shading) integral over spherical polygons with linear transformation to retrieve features of more accurate physically based lighting models.
+
 #### Ongoing Work:
-- Area Lights with Clustered Shading integration.
-- Area light assignment algorithms.
-- Investigating a good way to handle strongly specular materials in clustered shading.
-- Maybe Order-Independent Transparency to handle glTF files with transparent objects batched into one draw call..
+- Assigning area lights to clusters for culling dynamic area lights.
+- Report write-up.
+- Maybe investigating a good way to handle strongly specular materials in clustered shading.
+- Maybe Order-Independent Transparency to handle glTF files with transparent objects batched into one draw call.
 
 ---
-
+<!-- 
 ### Key Results
 
 #### Performance Comparison: Clustered Shading
 Hundreds of lights running only on laptop with integrated graphics.
 | Without Clustered Shading | With Clustered Shading |
 |---------------------------|-------------------------|
-| 1fps (completely unplayable) ![No clustered shading example, 1fps](files/30dec-testlosttemple-clusteroff.PNG) | 16fps (massive improvement) ![Clustered shading example, 16fps](files/30dec-testlosttemple-clusteron.PNG) |
-
+| (completely unplayable) ![No clustered shading example, 1fps](files/30dec-testlosttemple-clusteroff.PNG) | (massive improvement) ![Clustered shading example, 16fps](files/30dec-testlosttemple-clusteron.PNG) | -->
+<!-- 
 #### Renderer Development Progress
 
 Cluster visualization: Warmer clusters have more lights in them. 
 ![Heatmap Off - Sun Temple](files/30dec-heatmapoff-suntemple2.png)
 ![Heatmap On - Sun Temple](files/30dec-heatmap-suntemple2.png)
-![Point Light Testing](files/7dec-point-light-initial-testing.PNG)
+![Point Light Testing](files/7dec-point-light-initial-testing.PNG) -->
 
 <img src="files/22dec-blendtest.PNG" width="49%"> <img src="files/19dec-100point_lights-shinyUntitled.png" width="49%">
 <img src="files/18dec-screenshot.PNG" width="49%"> <img src="files/28dec-cool.PNG" width="49%">
