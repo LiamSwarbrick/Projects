@@ -1,6 +1,6 @@
 # My Projects
 **Liam Swarbrick**  
-_Looking for a summer internship / summer job_
+<!-- _Looking for a summer internship / summer job_ -->
 
 I am currently in my third year at the **University of Leeds** studying a **MEng/BSc in Computer Science with High Performance Computer Graphics and Games Engineering**.
 
