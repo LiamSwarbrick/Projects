@@ -43,17 +43,16 @@ This November 2024, I began my thesis project **"Integrating Linearly-Transforme
   - Full PBR support including dynamic lights, emissive textures, occlusion maps, normal mapping, and alpha blending with depth sorting.
   - Compatible with way too many glTF files, its became quite a complete renderer.
 
-- **Light Culling with Clustered Shading**:
-  - First compute shader divides the view space into voxel clusters and then another compute shader performs bruteforce light assignment to clusters.
-  - Provides massive performance boosts with scenes featuring many dynamic lights.
-
 - **Linearly Transformed Cosine based Area lights**:
   - Physically based rendering of area light as per Heitz. et al. that supports any non-convex polygon by transforming the closed-form lambertian (perfect diffuse shading) integral over spherical polygons with linear transformation to retrieve features of more accurate physically based lighting models.
 
+- **Area Light Culling with Clustered Shading**:
+  - First compute shader divides the view space into voxel clusters and then another compute shader performs bruteforce light assignment to clusters.
+  - Makes it feasible to use many dynamic area lights throughout a scene in real-time without needing a good graphics card. It does this by keeping the number of light computations each pixel performs to a minimum ($\le$ the max number of overlapping area lights).
+
 #### Ongoing Work:
-- Assigning area lights to clusters for culling dynamic area lights.
 - Report write-up.
-- Maybe investigating a good way to handle strongly specular materials in clustered shading.
+- Improving light assignment to better better handle strongly specular materials in clustered shading. Since specular light has huge radius but narrow apperture.
 - Maybe Order-Independent Transparency to handle glTF files with transparent objects batched into one draw call.
 
 ---
