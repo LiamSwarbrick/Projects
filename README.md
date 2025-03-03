@@ -32,7 +32,8 @@ This November 2024, I began my thesis project **"Integrating Linearly-Transforme
 <!-- <img src="files/30dec-heatmapoff-suntemple.png" width="49%"> <img src="files/30dec-heatmap-suntemple.png" width="49%"> -->
 
 <img src="files/15feb-showing-ltc-area-light.PNG" width="100%">
-<img src="files/18feb-fixed-triangle-lowerres.PNG" width="100%">
+<!-- <img src="files/18feb-fixed-triangle-lowerres.PNG" width="100%"> -->
+<img src="files/03march-correctarealights-lowres.PNG", width="100%">
 <img src="files/18jan-nothing-new-5.PNG", width="48%">  <img src="files/18jan-nothing-new-6.PNG", width="49%">
 <img src="files/15feb-pentagonsmall.PNG" width="49%">  <img src="files/18jan-nothing-new-4.PNG", width="49%">
 
