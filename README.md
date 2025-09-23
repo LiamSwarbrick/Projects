@@ -2,17 +2,15 @@
 **Liam Swarbrick**  
 <!-- _Looking for a summer internship / summer job_ -->
 
-I am currently in my third year at the **University of Leeds** studying a **MEng/BSc in Computer Science with High Performance Computer Graphics and Games Engineering**.
+I am currently in my fourth year at the University of Leeds completing the last year of my **MEng/BSc in Computer Science with High Performance Computer Graphics and Games Engineering**.
 
-I'm actively developing my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**. [(Progress update below.)](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer-progress-update)
+<!-- I'm actively developing my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**. [(Progress update below.)](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer-progress-update) -->
 
-Here are some of my projects; I heavily involve myself with **real time rendering and game programming**.
+Here are some of my projects; heavily involve in **real time rendering and game/engine programming**.
 
-****
 - [My Projects](#my-projects)
-  - [Thesis Progress: "Integrating Linearly-Transformed Cosine Based Area Lights into a Clustered Forward Renderer"](#thesis-progress-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer)
-      - [Completed Features:](#completed-features)
-      - [Ongoing Work:](#ongoing-work)
+  - [(Thesis) Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading](#thesis-endless-cinematic-area-lighting-scalable-real-time-ltc-polygonal-lights-with-clustered-forward-shading)
+    - [My From Scratch Rendering Engine: A glTF 2.0 Physically-Based Renderer in C and OpenGL 4.6](#my-from-scratch-rendering-engine-a-gltf-20-physically-based-renderer-in-c-and-opengl-46)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
   - [2D Platformer Engine in C with Raylib](#2d-platformer-engine-in-c-with-raylib)
   - [Compiler for Java-like language 'Jack' written in C](#compiler-for-java-like-language-jack-written-in-c)
@@ -24,61 +22,64 @@ Here are some of my projects; I heavily involve myself with **real time renderin
     - [Unfinished C Game-Boy Emulator (2019)](#unfinished-c-game-boy-emulator-2019)
     - [C# Game drop-down console (2018)](#c-game-drop-down-console-2018)
 
+## (Thesis) Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading
 
+For my year project I designed a novel technique for Clustered (forward) renderers to render thousands of LTC-based polygonal area-lights in real-time. Focused on maintaining accurate long range specular culling and tight diffuse culling.
+The approach assigns area lights to both spatial and normal (directional) clusters each frame using compute shaders.
+
+[read my thesis here](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf)
+
+### My From Scratch Rendering Engine: A glTF 2.0 Physically-Based Renderer in C and OpenGL 4.6
+
+Along with this report, the proposed system has been implemented in a custom glTF 2.0
+Physically Based Rendering (PBR) engine, developed in C with the OpenGL 4.6 graphics API
+for Windows and Linux. glTF 2.0 is a modern 3D scene file format designed for PBR pipelines and modern graphics APIs.
+
+[_source code here (github)_](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)
+
+The video below showcases the system in a scene composed of 2000 polygonal lights and sixteen instances of the UE4 Sun Temple model, arranged in a grid to emulate a more expansive environment.
+
+[<img src="files/main-test-crop.jpg">](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)
+<!-- <img src="files/main-test-viz.PNG" width="49%"> -->
+
+<!-- 
 ## Thesis Progress: "Integrating Linearly-Transformed Cosine Based Area Lights into a Clustered Forward Renderer"
 
 This November 2024, I began my thesis project **"Integrating Linearly-Transformed Cosine Based Area Lights into a Clustered Forward Renderer"**. I'm developing a custom OpenGL 4.6 renderer in C. Below is a snapshot of my progress so far:
 
 <!-- <img src="files/30dec-heatmapoff-suntemple.png" width="49%"> <img src="files/30dec-heatmap-suntemple.png" width="49%"> -->
-
+<!-- 
 <img src="files/15feb-showing-ltc-area-light.PNG" width="100%">
 <!-- <img src="files/18feb-fixed-triangle-lowerres.PNG" width="100%"> -->
+<!-- 
 <img src="files/03march-correctarealights-lowres.PNG", width="100%">
 <img src="files/18jan-nothing-new-5.PNG", width="48%">  <img src="files/18jan-nothing-new-6.PNG", width="49%">
-<img src="files/15feb-pentagonsmall.PNG" width="49%">  <img src="files/18jan-nothing-new-4.PNG", width="49%">
-
----
-
-#### Completed Features:
+<img src="files/15feb-pentagonsmall.PNG" width="49%">  <img src="files/18jan-nothing-new-4.PNG", width="49%"> -->
+<!-- 
+#### Features of My OpenGL 4.6 C Renderer:
 - **Custom glTF Physically-Based Renderer**:
-  - Full PBR support including dynamic lights, emissive textures, occlusion maps, normal mapping, and alpha blending with depth sorting.
-  - Compatible with way too many glTF files, its became quite a complete renderer.
+  Full PBR support including dynamic lights, emissive textures, occlusion maps, normal mapping, and alpha blending with depth sorting.
 
-- **Linearly Transformed Cosine based Area lights**:
+- **Culled Linearly Transformed Cosine based Area lights**:
   - Physically based rendering of area light as per Heitz. et al. that supports any non-convex polygon by transforming the closed-form lambertian (perfect diffuse shading) integral over spherical polygons with linear transformation to retrieve features of more accurate physically based lighting models.
 
-- **Area Light Culling with Clustered Shading**:
+- **Novel Area Light Culling with Clustered Shading**:
   - First compute shader divides the view space into voxel clusters and then another compute shader performs bruteforce light assignment to clusters.
-  - Makes it feasible to use many dynamic area lights throughout a scene in real-time without needing a good graphics card. It does this by keeping the number of light computations each pixel performs to a minimum ($\le$ the max number of overlapping area lights).
-
+  - Makes it feasible to use many dynamic area lights throughout a scene in real-time without needing a good graphics card. It does this by keeping the number of light computations each pixel performs to a minimum ($\le$ the max number of overlapping area lights). -->
+<!-- 
 #### Ongoing Work:
 - Report write-up.
 - Improving light assignment to better better handle strongly specular materials in clustered shading. Since specular light has huge radius but narrow apperture.
-- Maybe Order-Independent Transparency to handle glTF files with transparent objects batched into one draw call.
+- Maybe Order-Independent Transparency to handle glTF files with transparent objects batched into one draw call. -->
 
----
+<!-- --- -->
 <!-- 
-### Key Results
-
-#### Performance Comparison: Clustered Shading
-Hundreds of lights running only on laptop with integrated graphics.
-| Without Clustered Shading | With Clustered Shading |
-|---------------------------|-------------------------|
-| (completely unplayable) ![No clustered shading example, 1fps](files/30dec-testlosttemple-clusteroff.PNG) | (massive improvement) ![Clustered shading example, 16fps](files/30dec-testlosttemple-clusteron.PNG) | -->
-<!-- 
-#### Renderer Development Progress
-
-Cluster visualization: Warmer clusters have more lights in them. 
-![Heatmap Off - Sun Temple](files/30dec-heatmapoff-suntemple2.png)
-![Heatmap On - Sun Temple](files/30dec-heatmap-suntemple2.png)
-![Point Light Testing](files/7dec-point-light-initial-testing.PNG) -->
-
 <img src="files/22dec-blendtest.PNG" width="49%"> <img src="files/19dec-100point_lights-shinyUntitled.png" width="49%">
 <img src="files/18dec-screenshot.PNG" width="49%"> <img src="files/28dec-cool.PNG" width="49%">
 <img src="files/11nov-basecolor-texture-not-properly-working-initially.PNG" width="49%"> <img src="files/13nov-helmet-pbr-halfres.PNG" width="49%">
-Early version^
+Early version^ --> -->
 
----
+<!-- --- -->
 
 ## Voxel Game in C with OpenGL 4.5 from scratch on the Win32API
 ![Early screenshot from my voxel game](files/blockgame-early-screenshot.PNG)
