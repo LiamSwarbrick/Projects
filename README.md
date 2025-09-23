@@ -10,7 +10,7 @@ Here are some of my projects; heavily involve in **real time rendering and game/
 
 - [My Projects](#my-projects)
   - [(Thesis) Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading](#thesis-endless-cinematic-area-lighting-scalable-real-time-ltc-polygonal-lights-with-clustered-forward-shading)
-    - [My From Scratch Rendering Engine: A glTF 2.0 Physically-Based Renderer in C and OpenGL 4.6](#my-from-scratch-rendering-engine-a-gltf-20-physically-based-renderer-in-c-and-opengl-46)
+      - [Progress screenshots of early versions during the development of the renderer:](#progress-screenshots-of-early-versions-during-the-development-of-the-renderer)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
   - [2D Platformer Engine in C with Raylib](#2d-platformer-engine-in-c-with-raylib)
   - [Compiler for Java-like language 'Jack' written in C](#compiler-for-java-like-language-jack-written-in-c)
@@ -24,22 +24,42 @@ Here are some of my projects; heavily involve in **real time rendering and game/
 
 ## (Thesis) Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading
 
-For my year project I designed a novel technique for Clustered (forward) renderers to render thousands of LTC-based polygonal area-lights in real-time. Focused on maintaining accurate long range specular culling and tight diffuse culling.
+This project explores scalable real-time rendering of polygonal area lights using Linearly Transformed Cosines (LTCs) in a clustered forward shading pipeline. While LTCs make physically based polygonal lights efficient, they scale poorly with many light sources due to per-light computation overhead.
+
+To address this, I developed a system that performs both spatial and normal-space clustering, enabling aggressive and accurate light culling. Unlike previous assumptions that normal cones were too costly, this method demonstrates that they significantly improve performance for polygonal lights — preserving high visual fidelity while supporting thousands of lights at interactive frame rates.
+
+The system is implemented in a custom glTF 2.0 Physically Based Renderer I made during the project. It's written in C with OpenGL 4.6 for Windows and Linux.
+
+See below for a demo video of the renderer with 2000 polygonal lights across multiple instances of the UE4 Sun Temple model, illustrating scalability in large environments.
+
+📄 [Read my thesis](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf)  
+💻 [View the source code](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)  
+🎥 [Watch a demo video](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)
+
+![](files/main-test-crop.jpg)
+
+<img src="files/03march-correctarealights-lowres.PNG" width="49%">
+<img src="files/main-test-viz-crop.PNG" width="49.55%">
+
+#### Progress screenshots of early versions during the development of the renderer:
+<img src="files/22dec-blendtest.PNG" width="23%"> <img src="files/19dec-100point_lights-shinyUntitled.png" width="23%"> <img src="files/18dec-screenshot.PNG" width="23%"> <img src="files/28dec-cool.PNG" width="23%">
+<img src="files/30dec-testlosttemple-clusteron.PNG" width="23%"> <img src="files/13nov-helmet-pbr-halfres.PNG" width="23%"> <img src="files/11nov-basecolor-texture-not-properly-working-initially.PNG" width="23%"> <img src="files/12nov-sponza-basecolor-simple-diffuse-directional-(smallpng).PNG" width="23%">
+
+
+<!-- For my year project I developed a scalable area lighting technique for Clustered (forward) renderers to render thousands of LTC-based polygonal area-lights in real-time. I focused on maintaining accurate long range specular culling and tight diffuse culling.
 The approach assigns area lights to both spatial and normal (directional) clusters each frame using compute shaders.
 
 [read my thesis here](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf)
 
-### My From Scratch Rendering Engine: A glTF 2.0 Physically-Based Renderer in C and OpenGL 4.6
+### Custom Rendering Engine: A glTF 2.0 Physically-Based Renderer in C and OpenGL 4.6
 
-Along with this report, the proposed system has been implemented in a custom glTF 2.0
-Physically Based Rendering (PBR) engine, developed in C with the OpenGL 4.6 graphics API
-for Windows and Linux. glTF 2.0 is a modern 3D scene file format designed for PBR pipelines and modern graphics APIs.
+Along with this report, I implemented the proposed system in a custom glTF 2.0 Physically Based Rendering (PBR) engine, developed in C with the OpenGL 4.6 graphics API for Windows and Linux. glTF 2.0 is a modern 3D scene file format designed for PBR pipelines and modern graphics APIs.
 
 [_source code here (github)_](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)
 
 The video below showcases the system in a scene composed of 2000 polygonal lights and sixteen instances of the UE4 Sun Temple model, arranged in a grid to emulate a more expansive environment.
 
-[<img src="files/main-test-crop.jpg">](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)
+[<img src="files/main-test-crop.jpg">](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w) -->
 <!-- <img src="files/main-test-viz.PNG" width="49%"> -->
 
 <!-- 
@@ -73,11 +93,6 @@ This November 2024, I began my thesis project **"Integrating Linearly-Transforme
 - Maybe Order-Independent Transparency to handle glTF files with transparent objects batched into one draw call. -->
 
 <!-- --- -->
-<!-- 
-<img src="files/22dec-blendtest.PNG" width="49%"> <img src="files/19dec-100point_lights-shinyUntitled.png" width="49%">
-<img src="files/18dec-screenshot.PNG" width="49%"> <img src="files/28dec-cool.PNG" width="49%">
-<img src="files/11nov-basecolor-texture-not-properly-working-initially.PNG" width="49%"> <img src="files/13nov-helmet-pbr-halfres.PNG" width="49%">
-Early version^ --> -->
 
 <!-- --- -->
 
