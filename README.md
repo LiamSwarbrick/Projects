@@ -38,8 +38,7 @@ See below for a demo video of the renderer with 2000 polygonal lights across mul
 
 ![](files/main-test-crop.jpg)
 
-<img src="files/03march-correctarealights-lowres.PNG" width="48%">
-<img src="files/main-test-viz-crop.PNG" width="49%">
+<img src="files/03march-correctarealights-lowres.PNG" width="48%"> <img src="files/main-test-viz-crop.PNG" width="49%">
 
 #### Progress screenshots of early versions during the development of the renderer:
 <img src="files/22dec-blendtest.PNG" width="23%"> <img src="files/19dec-100point_lights-shinyUntitled.png" width="23%"> <img src="files/18dec-screenshot.PNG" width="23%"> <img src="files/28dec-cool.PNG" width="23%">
