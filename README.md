@@ -26,7 +26,7 @@ Here are some of my projects; heavily involve in **real time rendering and game/
 
 ## (2024/25) Thesis: Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading
 
-This project explores scalable real-time rendering of polygonal area lights using Linearly Transformed Cosines (LTCs) in a clustered forward shading pipeline. While LTCs make physically based polygonal lights efficient, they scale poorly with many light sources due to per-light computation overhead.
+This project explores scalable real-time rendering of polygonal area lights using Linearly Transformed Cosines (LTCs) in a clustered forward shading pipeline. While LTCs make physically based polygonal lights efficient, they can only be used very sparingly in real-time applications, as they scale poorly with many light sources due to high computational cost per area light.
 
 To address this, I developed a system that performs both spatial and normal-space clustering for aggressive and accurate light culling. Unlike previous assumptions that normal cones were too costly, this method demonstrates that they significantly improve performance for polygonal lights --- retaining distant specular reflections while supporting thousands of lights at interactive frame rates.
 
