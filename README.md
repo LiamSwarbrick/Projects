@@ -10,6 +10,7 @@ Here are some of my projects; heavily involve in **real time rendering and game/
 
 - [My Projects](#my-projects)
   - [(Thesis) Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading](#thesis-endless-cinematic-area-lighting-scalable-real-time-ltc-polygonal-lights-with-clustered-forward-shading)
+      - [Future Research](#future-research)
       - [Progress screenshots of early versions during the development of the renderer:](#progress-screenshots-of-early-versions-during-the-development-of-the-renderer)
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
   - [2D Platformer Engine in C with Raylib](#2d-platformer-engine-in-c-with-raylib)
@@ -26,15 +27,18 @@ Here are some of my projects; heavily involve in **real time rendering and game/
 
 This project explores scalable real-time rendering of polygonal area lights using Linearly Transformed Cosines (LTCs) in a clustered forward shading pipeline. While LTCs make physically based polygonal lights efficient, they scale poorly with many light sources due to per-light computation overhead.
 
-To address this, I developed a system that performs both spatial and normal-space clustering, enabling aggressive and accurate light culling. Unlike previous assumptions that normal cones were too costly, this method demonstrates that they significantly improve performance for polygonal lights — preserving high visual fidelity while supporting thousands of lights at interactive frame rates.
+To address this, I developed a system that performs both spatial and normal-space clustering for aggressive and accurate light culling. Unlike previous assumptions that normal cones were too costly, this method demonstrates that they significantly improve performance for polygonal lights --- retaining distant specular reflections while supporting thousands of lights at interactive frame rates.
 
-The system is implemented in a custom glTF 2.0 Physically Based Renderer I made during the project. It's written in C with OpenGL 4.6 for Windows and Linux.
+The system is implemented in a custom glTF 2.0 Physically Based Renderer that I made from scratch during the project. It's written in C with OpenGL 4.6 for Windows and Linux.
 
-See below for a demo video of the renderer with 2000 polygonal lights across multiple instances of the UE4 Sun Temple model, illustrating scalability in large environments.
+See below for a demo video of the renderer with 2000 polygonal lights across multiple instances of the UE4 Sun Temple model to see the scalability in large environments.
 
 📄 [Read my thesis](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf)  
-💻 [View the source code](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)  
-🎥 [Watch a demo video](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)
+💻 [Peruse the source code](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)  
+🎥 [See a demo video](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)
+
+#### Future Research
+This project's is set to be developed further to get to an industrial standard, for instance, light assignment can be speedup massively using sparse clustering, and redeveloping the light assignment approach more soundly should make the algorithm more precise and avoid any edge cases as industry frowns upon edge cases greatly. 
 
 ![](files/main-test-crop.jpg)
 
