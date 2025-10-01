@@ -33,9 +33,12 @@ The system is implemented in a custom glTF 2.0 Physically Based Renderer that I 
 
 See below for a demo video of the renderer with 2000 polygonal lights across multiple instances of the UE4 Sun Temple model to see the scalability in large environments.
 
-📄 [Read my thesis](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf)  
-💻 [Peruse the source code](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)  
-🎥 [See a demo video](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)
+Read: [📄report/thesis](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf) - [📄source code](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)
+Demo video: [YouTube](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)
+
+<!-- 📄 [Read my thesis](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf)   -->
+<!-- 💻 [Peruse the source code](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)   -->
+<!-- 🎥 [See a demo video](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w) -->
 
 #### Future Research
 This project's is set to be developed further to get to an industrial standard, for instance, light assignment can be speedup massively using sparse clustering, and redeveloping the light assignment approach more soundly should make the algorithm more precise and avoid any edge cases as industry frowns upon edge cases greatly. 
