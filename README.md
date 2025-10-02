@@ -9,22 +9,28 @@ I am currently in my fourth year at the University of Leeds completing the last 
 Here are some of my projects; heavily involve in **real time rendering and game/engine programming**.
 
 - [My Projects](#my-projects)
-  - [(2024/25) Thesis: Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading](#202425-thesis-endless-cinematic-area-lighting-scalable-real-time-ltc-polygonal-lights-with-clustered-forward-shading)
+  - [Scalable Real-Time Polygonal Area Lighting (My BSc Thesis \& Custom glTF2 Renderer) (2024/25)](#scalable-real-time-polygonal-area-lighting-my-bsc-thesis--custom-gltf2-renderer-202425)
       - [Future Research](#future-research)
       - [Progress screenshots of early versions during the development of the renderer:](#progress-screenshots-of-early-versions-during-the-development-of-the-renderer)
-  - [(2022) Voxel Game in C with OpenGL 4.5 from scratch on the Win32API](#2022-voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api)
-  - [(2023) 2D Platformer Engine in C with Raylib](#2023-2d-platformer-engine-in-c-with-raylib)
-  - [(2024) Compiler for Java-like language 'Jack' written in C](#2024-compiler-for-java-like-language-jack-written-in-c)
-  - [(2019) Godot-Wild Game-Jam Winner: My Precision Platformer for the theme "One Control"](#2019-godot-wild-game-jam-winner-my-precision-platformer-for-the-theme-one-control)
-  - [(2023) Library Website in Python-Flask](#2023-library-website-in-python-flask)
-  - [(2019) My Godot game that ran on the Nintendo Switch](#2019-my-godot-game-that-ran-on-the-nintendo-switch)
+  - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API (2022)](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api-2022)
+  - [2D Platformer Engine in C with Raylib (2023)](#2d-platformer-engine-in-c-with-raylib-2023)
+  - [Compiler for Java-like language 'Jack' written in C (2024)](#compiler-for-java-like-language-jack-written-in-c-2024)
+  - [Godot-Wild Game-Jam Winner: My Precision Platformer for the theme "One Control" (2019)](#godot-wild-game-jam-winner-my-precision-platformer-for-the-theme-one-control-2019)
+  - [Library Website in Python-Flask (2023)](#library-website-in-python-flask-2023)
+  - [My Godot game that ran on the Nintendo Switch (2019)](#my-godot-game-that-ran-on-the-nintendo-switch-2019)
   - [Snippet of my older unfinished but of interest projects](#snippet-of-my-older-unfinished-but-of-interest-projects)
-    - [(2020) Dual-Quaternion vertex skinning implementation I couldn't render](#2020-dual-quaternion-vertex-skinning-implementation-i-couldnt-render)
-    - [(2019) Unfinished C Game-Boy Emulator](#2019-unfinished-c-game-boy-emulator)
-    - [(2018) C# Game drop-down console](#2018-c-game-drop-down-console)
-    - [(2016-2018) Python Games](#2016-2018-python-games)
+    - [Dual-Quaternion vertex skinning implementation I couldn't render (2020)](#dual-quaternion-vertex-skinning-implementation-i-couldnt-render-2020)
+    - [Unfinished C Game-Boy Emulator (2019)](#unfinished-c-game-boy-emulator-2019)
+    - [C# Game drop-down console (2018)](#c-game-drop-down-console-2018)
+    - [Other Games and Projects (2016-2018)](#other-games-and-projects-2016-2018)
+      - [My old released games on Itch: https://liam-swarbrick.itch.io/ (Creator Page) or https://itch.io/profile/liam-swarbrick (Profile)](#my-old-released-games-on-itch-httpsliam-swarbrickitchio-creator-page-or-httpsitchioprofileliam-swarbrick-profile)
 
-## (2024/25) Thesis: Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading
+## Scalable Real-Time Polygonal Area Lighting (My BSc Thesis & Custom glTF2 Renderer) (2024/25)
+
+
+_Project Title:_ **"Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading"**
+_Deliverable:_ Custom OpenGL 4.6 glTF2.0 Physically-Based scene renderer in C that supports thousands of polygonal area lights in real-time.
+_Development Time_: November 2024 - April 2025
 
 This project explores scalable real-time rendering of polygonal area lights using Linearly Transformed Cosines (LTCs) in a clustered forward shading pipeline. While LTCs make physically based polygonal lights efficient, they can only be used very sparingly in real-time applications, as they scale poorly with many light sources due to high computational cost per area light.
 
@@ -103,7 +109,7 @@ This November 2024, I began my thesis project **"Integrating Linearly-Transforme
 
 <!-- --- -->
 
-## (2022) Voxel Game in C with OpenGL 4.5 from scratch on the Win32API
+## Voxel Game in C with OpenGL 4.5 from scratch on the Win32API (2022)
 ![Early screenshot from my voxel game](files/blockgame-early-screenshot.PNG)
 
 Voxel rendering with 3D chunking, texture arrays and mesh-culling optimisations. My most recent project so it's at an early stage. I intend to add proper world generation, and need to add a faster chunk hashing system.
@@ -116,7 +122,7 @@ Programmed so that the Windows API layer is straight forward to swap with a cros
 
 RenderDoc and OpenGL 4.5's debugging API were very useful for GPU debugging, which I needed to do a lot of, especially for building and uploading the mesh data of each voxel chunk.
 
-## (2023) 2D Platformer Engine in C with Raylib
+## 2D Platformer Engine in C with Raylib (2023)
 
 ![Cropped Gameplay of my 2D platformer engine](files/planetarium-camera-and-entities-cropped.gif)
 <img src="files/planetarium-collision-box.PNG" alt="Collision box from aseprite" width="33%">
@@ -133,13 +139,13 @@ At some point I want to create a full length 2D story/platforming game this way 
 - [Sprite system loading Aseprite files](2d_c_engine.md#sprite-system-loading-aseprite-files)
 - [Easy to work with entity system](2d_c_engine.md#easy-to-work-with-entity-system)
 
-## (2024) Compiler for Java-like language 'Jack' written in C
+## Compiler for Java-like language 'Jack' written in C (2024)
 
 This project was for a University coursework, written in C using recursive-descent and it passed all testing and edge cases, receiving max marks. The input is a folder of .jack source files and compiles to virtual machine code for the Hack computer.
 
 <img src="files/jack_compiler_pong.PNG" alt="My compiler's output for Nand2Tetris' Pong jack program" width="75%">
 
-## (2019) Godot-Wild Game-Jam Winner: My Precision Platformer for the theme "One Control"
+## Godot-Wild Game-Jam Winner: My Precision Platformer for the theme "One Control" (2019)
 
 For the theme of "One-Control", in just over a week I made an entry for the January 2019 [Godot-Wild Jam #5](https://itch.io/jam/godot-wild-jam-5/rate/358355)!
 
@@ -156,7 +162,7 @@ The community behind this jam was really great and gave lots of lovely feedback!
 
 
 
-## (2023) Library Website in Python-Flask
+## Library Website in Python-Flask (2023)
 
 This project was for a University coursework. The site dynamically loads books from the server, has a secure log in system, book reviews and rating system, user's personal library.
 The site is accessible, for instance in an accessibility pass the colours and contrasts were adjusted to be more colour-blind friendly, and the site passed checks with WAVE (A web accessability evaluation tool).
@@ -167,7 +173,7 @@ Users, Books, and Reviews are stored in a SQL database. [Here is the models pyth
 <img src="files/libsite-librarypage.png" alt="Library website library page" width="75%">
 
 
-## (2019) My Godot game that ran on the Nintendo Switch
+## My Godot game that ran on the Nintendo Switch (2019)
 
 For the 100-hour long Extra Credits Game Jam #3 (Feb 2019), I made a grapple hook game in the Godot Engine. I went for a game-boy style colour restriction since it was faster to make the assets that way in such a short time-span.
 _Since 2019 to the time of writing this, it should still be on [liamswarbrick.github.io](https://liamswarbrick.github.io), an updated version at least, which is slightly longer (but without the end screen) and slightly tighter controls than the original downloadable version._
@@ -191,7 +197,7 @@ The Godot engine founder Ariel Manzur emailed me asking if I'd like to see a bui
 ## Snippet of my older unfinished but of interest projects
 I have many older and unfinished projects in all sorts of languages: Python, C#, Haxe, Rust etc. Here's some random examples...
 
-### (2020) Dual-Quaternion vertex skinning implementation I couldn't render
+### Dual-Quaternion vertex skinning implementation I couldn't render (2020)
 
 For my A-Level Computer Science project I went for a far too challenging project for my 16 year old self but it helped me so much more in the years to come than any boring project I could've finished.
 
@@ -200,7 +206,7 @@ I wrote an OpenGL 4.5 renderer that could load obj files, and I wanted to try sk
 See my implementation in the C header file [skeletal_animation.h](source/skrewrite-dual-quat-snippet/game/src/skeletal_animation.h) and the shader code [rigged_mesh_vertex_shader.glsl.](source/skrewrite-dual-quat-snippet/game/data/shaders/rigged_mesh_vertex_shader.glsl)
 
 
-### (2019) Unfinished C Game-Boy Emulator
+### Unfinished C Game-Boy Emulator (2019)
 
 I was very interested in game console emulation, but never finished implementing all the instructions for the Game-Boy's processor. I'll definitely do some more emulator development in the future.
 
@@ -234,12 +240,19 @@ typedef struct CPU
 CPU;
 ```
 
-### (2018) C\# Game drop-down console
+### C\# Game drop-down console (2018)
 
 Made in C# and Raylib, command processing was implemented after this old video, intended to be used for game debugging.
 
 <img src="files/csharp-drop-down-console.gif" width="75%">
 
-### (2016-2018) Python Games
-I made a plethrough of small games in Python these years, including 2D games using the pygame library, and a basic 3D cube renderer using OpenGL's fixed function pipeline.
+### Other Games and Projects (2016-2018)
+
+In these years I developed plenty of small games and programming projects in C#, Godot, and Python to name the most significant.
+For my early days of programming I was making small games in Python, mostly 2D games using the pygame library, and also a basic cube renderer using OpenGL 1's fixed function pipeline.
+In C# I started learning the basic of modern OpenGL, with hobby projects that included texture mapping and point lighting. I was also a fan of XNA games so I made a few very unfinished 2D games in MonoGame.
+
+#### My old released games on Itch: https://liam-swarbrick.itch.io/ (Creator Page) or https://itch.io/profile/liam-swarbrick (Profile)
+When I found the Godot engine, I became hooked for a while on engine based game development, joining many game jams, participating alot in game development communities and making many small but finished games that other would play and give feedback on via my itch io page.
+
 Most of my old projects are lost to time, or aren't worth listing here, given they date to when I was just starting to teach myself to program as a teenager.
