@@ -42,7 +42,7 @@ Demo video: [YouTube](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)
 <!-- 🎥 [See a demo video](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w) -->
 
 #### Future Research
-This project's is set to be developed further to get to an industrial standard, for instance, light assignment can be speedup massively using sparse clustering, and redeveloping the light assignment approach more soundly should make the algorithm more precise and avoid any edge cases as industry frowns upon edge cases greatly. 
+If time allows, this project's is set to be developed further to get to an industrial standard, for instance, light assignment can be speedup massively using sparse clustering, and redeveloping the light assignment approach more soundly should make the algorithm more precise and avoid any edge cases as industry frowns upon edge cases greatly. 
 
 ![](files/main-test-crop.jpg)
 
