@@ -40,9 +40,9 @@ The system is implemented in a custom glTF 2.0 Physically Based Renderer that I 
 
 See below for a demo video of the renderer with 2000 polygonal lights across multiple instances of the UE4 Sun Temple model to see the scalability in large environments.
 
-Read: [📄report/thesis](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf) - [📄source code](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)
-Demo video of 2000 Area Lights in 606,000 triangle scene (Diffuse Bounds): [YouTube](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)
-Demo walkthrough of Light Cones for efficient specular in NormalxPosition Clustered Shading: [YouTube](https://youtu.be/m9sKT003kLM?si=JkejAa6j87bZ9MaZ)
+Read: [📄report/thesis](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf) - [📄source code](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)  
+Demo video of 2000 Area Lights in 606,000 triangle scene (Diffuse Bounds): [YouTube](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)  
+Demo walkthrough of Light Cones for efficient specular in NormalxPosition Clustered Shading: [YouTube](https://youtu.be/m9sKT003kLM?si=JkejAa6j87bZ9MaZ)  
 
 <!-- 📄 [Read my thesis](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf)   -->
 <!-- 💻 [Peruse the source code](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)   -->
@@ -113,13 +113,13 @@ This November 2024, I began my thesis project **"Integrating Linearly-Transforme
 ## Voxel Game in C with OpenGL 4.5 from scratch on the Win32API (2022)
 ![Early screenshot from my voxel game](files/blockgame-early-screenshot.PNG)
 
-Voxel rendering with 3D chunking, texture arrays and mesh-culling optimisations. My most recent project so it's at an early stage. I intend to add proper world generation, and need to add a faster chunk hashing system.
-
+Voxel rendering with 3D chunking, texture arrays and mesh-culling optimisations.
 My 3D chunk storage allows infinite height worlds which opens up more interesting world generation possibilities - sky islands, planets, deep sea trenches, the possibilities are endless.
+At some point I'd like to explore this project more fully, e.g. a faster chunk hashing system, and unique world generation with the unlimited height axis.
 
-[Feel free to peruse the source code to my program here if you also like some C programming](source/c_blockgame_september_snippet/src)
+[Click here](source/c_blockgame_september_snippet/src) to peruse the source code if you also like some C programming.
 
-Programmed so that the Windows API layer is straight forward to swap with a cross-platform library for Linux. Using no libraries was great for learning (hence not using GLFW). I implemented my own math library originally ([which you can see here](source/c_blockgame_september_snippet/old_custom_math_src/src_oldcustommath/include/basic_types.h)) but swapped it out for [cglm](https://github.com/recp/cglm) since I could trust its mathematical correctness when debugging rendering errors.
+Programmed so that the Windows API layer is straight forward to swap with a cross-platform library for Linux. Using no libraries was great for learning (hence not using GLFW). I implemented my own math library originally ([which you can see here](source/c_blockgame_september_snippet/old_custom_math_src/src_oldcustommath/include/basic_types.h)) but swapped it out for [cglm](https://github.com/recp/cglm) since I was short on time and needed to trust the mathematical correctness immediately when debugging rendering errors, rather than rushing through math functions without thorough testing.
 
 RenderDoc and OpenGL 4.5's debugging API were very useful for GPU debugging, which I needed to do a lot of, especially for building and uploading the mesh data of each voxel chunk.
 
