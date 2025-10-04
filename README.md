@@ -6,7 +6,7 @@ I am currently in my fourth year at the University of Leeds completing the last 
 
 <!-- I'm actively developing my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**. [(Progress update below.)](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer-progress-update) -->
 
-Here are some of my projects; heavily involve in **real time rendering and game/engine programming**.
+Here are some of my projects; my main focus currently is on real time rendering and game/engine programming.
 
 - [My Projects](#my-projects)
   - [Scalable Real-Time Polygonal Area Lighting (My BSc Thesis \& Custom glTF2 Renderer) (2024/25)](#scalable-real-time-polygonal-area-lighting-my-bsc-thesis--custom-gltf2-renderer-202425)
@@ -30,7 +30,7 @@ Here are some of my projects; heavily involve in **real time rendering and game/
 
 _Project Title:_ **"Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading"**
 _Deliverable:_ Custom OpenGL 4.6 glTF2.0 Physically-Based scene renderer in C that supports thousands of polygonal area lights in real-time.
-_Development Time_: November 2024 - April 2025
+_Development Time: November 2024 - April 2025_
 
 This project explores scalable real-time rendering of polygonal area lights using Linearly Transformed Cosines (LTCs) in a clustered forward shading pipeline. While LTCs make physically based polygonal lights efficient, they can only be used very sparingly in real-time applications, as they scale poorly with many light sources due to high computational cost per area light.
 
@@ -41,7 +41,8 @@ The system is implemented in a custom glTF 2.0 Physically Based Renderer that I 
 See below for a demo video of the renderer with 2000 polygonal lights across multiple instances of the UE4 Sun Temple model to see the scalability in large environments.
 
 Read: [📄report/thesis](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf) - [📄source code](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)
-Demo video: [YouTube](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)
+Demo video of 2000 Area Lights in 606,000 triangle scene (Diffuse Bounds): [YouTube](https://youtu.be/hqbCelGbMRc?si=f3NnEI9hrKSv9t3w)
+Demo walkthrough of Light Cones for efficient specular in NormalxPosition Clustered Shading: [YouTube](https://youtu.be/m9sKT003kLM?si=JkejAa6j87bZ9MaZ)
 
 <!-- 📄 [Read my thesis](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights/blob/main/report-postsubmission-fixed-clustered_arealights_thesis.pdf)   -->
 <!-- 💻 [Peruse the source code](https://github.com/LiamSwarbrick/LTCClustered-ManyAreaLights)   -->
