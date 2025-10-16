@@ -29,7 +29,9 @@ Here are some of my projects; my main focus currently is on real time rendering 
 
 
 _Project Title:_ **"Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading"**
-_Deliverable:_ Custom OpenGL 4.6 glTF2.0 Physically-Based scene renderer in C that supports thousands of polygonal area lights in real-time.
+
+_Software Delivered:_ Custom OpenGL 4.6 glTF2.0 Physically-Based scene renderer in C that supports thousands of polygonal area lights in real-time.
+
 _Development Time: November 2024 - April 2025_
 
 This project explores scalable real-time rendering of polygonal area lights using Linearly Transformed Cosines (LTCs) in a clustered forward shading pipeline. While LTCs make physically based polygonal lights efficient, they can only be used very sparingly in real-time applications, as they scale poorly with many light sources due to high computational cost per area light.
