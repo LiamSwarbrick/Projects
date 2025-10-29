@@ -31,10 +31,10 @@ Here are some of my projects; my main focus currently is on real time rendering 
 </details>
 
 ## Scalable Real-Time Polygonal Area Lighting (My BSc Thesis & Custom glTF2 Renderer) (2024/25)
+**"Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading"**
 
-<img src="files/newoldimage-normal-clustering-in-suntemple-6normals.png">
-
-_Project Title:_ **"Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading"**
+<img src="files/newoldimage-normal-clustering-in-suntemple-6normals-A.jpg">
+<img src="files/newoldimage-normal-clustering-in-suntemple-6normals-B.jpg">
 
 _Software Delivered:_ Custom OpenGL 4.6 glTF2.0 Physically-Based scene renderer in C that supports thousands of polygonal area lights in real-time.
 
