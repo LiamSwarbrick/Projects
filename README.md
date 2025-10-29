@@ -8,6 +8,9 @@ I am currently in my fourth year at the University of Leeds completing the last 
 
 Here are some of my projects; my main focus currently is on real time rendering and game/engine programming.
 
+<details>
+<summary><strong>My Projects - Table of Contents </strong></summary>
+
 - [My Projects](#my-projects)
   - [Scalable Real-Time Polygonal Area Lighting (My BSc Thesis \& Custom glTF2 Renderer) (2024/25)](#scalable-real-time-polygonal-area-lighting-my-bsc-thesis--custom-gltf2-renderer-202425)
       - [Future Research](#future-research)
@@ -24,6 +27,8 @@ Here are some of my projects; my main focus currently is on real time rendering 
     - [C# Game drop-down console (2018)](#c-game-drop-down-console-2018)
     - [Other Games and Projects (2016-2018)](#other-games-and-projects-2016-2018)
       - [My old released games on Itch: https://liam-swarbrick.itch.io/ (Creator Page) or https://itch.io/profile/liam-swarbrick (Profile)](#my-old-released-games-on-itch-httpsliam-swarbrickitchio-creator-page-or-httpsitchioprofileliam-swarbrick-profile)
+
+</details>
 
 ## Scalable Real-Time Polygonal Area Lighting (My BSc Thesis & Custom glTF2 Renderer) (2024/25)
 
