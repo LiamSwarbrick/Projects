@@ -121,12 +121,14 @@ This November 2024, I began my thesis project **"Integrating Linearly-Transforme
 <!-- --- -->
 
 ## 2D Platformer Engine in C with Raylib (2023)
-<!-- 
-<img src="files/planetarium-room-editor-fun.gif" alt="Tile editor" width="100%">
-<img src="files/planetarium-camera-and-entities-cropped.gif" alt="Cropped Gameplay of my 2D platformer engine" width="100%">
-<img src="files/planetarium-collision-box.PNG" alt="Collision box from aseprite" width="100%"> -->
 
-![Tile editor](files/planetarium-room-editor-fun.gif){width=32%} ![Cropped Gameplay of my 2D platformer engine](files/planetarium-camera-and-ventities-cropped.gif){width=32%} ![Collision box from aseprite](files/planetarium-collision-box.PNG){width=32%}
+<img src="files/planetarium-room-editor-fun.gif" alt="Tile editor" width="35%">
+<img src="files/planetarium-camera-and-entities-cropped.gif" alt="Cropped Gameplay of my 2D platformer engine" width="21%">
+<img src="files/planetarium-collision-box.PNG" alt="Collision box from aseprite" width="30%">
+
+<!-- ![Tile editor](files/planetarium-room-editor-fun.gif){width=32%}
+![Cropped Gameplay of my 2D platformer engine](files/planetarium-camera-and-ventities-cropped.gif){width=32%}
+![Collision box from aseprite](files/planetarium-collision-box.PNG){width=32%} -->
 
 <!-- <img src="files/planetarium-room-editor.gif" alt="Tile editor" width="40%"> -->
 
