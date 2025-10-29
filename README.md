@@ -15,8 +15,8 @@ Here are some of my projects; my main focus currently is on real time rendering 
   - [Scalable Real-Time Polygonal Area Lighting (My BSc Thesis \& Custom glTF2 Renderer) (2024/25)](#scalable-real-time-polygonal-area-lighting-my-bsc-thesis--custom-gltf2-renderer-202425)
       - [Future Research](#future-research)
       - [Progress screenshots of early versions during the development of the renderer:](#progress-screenshots-of-early-versions-during-the-development-of-the-renderer)
-  - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API (2022)](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api-2022)
   - [2D Platformer Engine in C with Raylib (2023)](#2d-platformer-engine-in-c-with-raylib-2023)
+  - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API (2022)](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api-2022)
   - [Compiler for Java-like language 'Jack' written in C (2024)](#compiler-for-java-like-language-jack-written-in-c-2024)
   - [Godot-Wild Game-Jam Winner: My Precision Platformer for the theme "One Control" (2019)](#godot-wild-game-jam-winner-my-precision-platformer-for-the-theme-one-control-2019)
   - [Library Website in Python-Flask (2023)](#library-website-in-python-flask-2023)
@@ -120,19 +120,6 @@ This November 2024, I began my thesis project **"Integrating Linearly-Transforme
 
 <!-- --- -->
 
-## Voxel Game in C with OpenGL 4.5 from scratch on the Win32API (2022)
-![Early screenshot from my voxel game](files/blockgame-early-screenshot.PNG)
-
-Voxel rendering with 3D chunking, texture arrays and mesh-culling optimisations.
-My 3D chunk storage allows infinite height worlds which opens up more interesting world generation possibilities - sky islands, planets, deep sea trenches, the possibilities are endless.
-At some point I'd like to explore this project more fully, e.g. a faster chunk hashing system, and unique world generation with the unlimited height axis.
-
-[Click here](source/c_blockgame_september_snippet/src) to peruse the source code if you also like some C programming.
-
-Programmed so that the Windows API layer is straight forward to swap with a cross-platform library for Linux. Using no libraries was great for learning (hence not using GLFW). I implemented my own math library originally ([which you can see here](source/c_blockgame_september_snippet/old_custom_math_src/src_oldcustommath/include/basic_types.h)) but swapped it out for [cglm](https://github.com/recp/cglm) since I was short on time and needed to trust the mathematical correctness immediately when debugging rendering errors, rather than rushing through math functions without thorough testing.
-
-RenderDoc and OpenGL 4.5's debugging API were very useful for GPU debugging, which I needed to do a lot of, especially for building and uploading the mesh data of each voxel chunk.
-
 ## 2D Platformer Engine in C with Raylib (2023)
 
 ![Cropped Gameplay of my 2D platformer engine](files/planetarium-camera-and-entities-cropped.gif)
@@ -149,6 +136,21 @@ At some point I want to create a full length 2D story/platforming game this way 
 - [Level creation and serialisation](2d_c_engine.md#level-creation-and-serialisation)
 - [Sprite system loading Aseprite files](2d_c_engine.md#sprite-system-loading-aseprite-files)
 - [Easy to work with entity system](2d_c_engine.md#easy-to-work-with-entity-system)
+
+
+## Voxel Game in C with OpenGL 4.5 from scratch on the Win32API (2022)
+![Early screenshot from my voxel game](files/blockgame-early-screenshot.PNG)
+
+Voxel rendering with 3D chunking, texture arrays and mesh-culling optimisations.
+My 3D chunk storage allows infinite height worlds which opens up more interesting world generation possibilities - sky islands, planets, deep sea trenches, the possibilities are endless.
+At some point I'd like to explore this project more fully, e.g. a faster chunk hashing system, and unique world generation with the unlimited height axis.
+
+[Click here](source/c_blockgame_september_snippet/src) to peruse the source code if you also like some C programming.
+
+Programmed so that the Windows API layer is straight forward to swap with a cross-platform library for Linux. Using no libraries was great for learning (hence not using GLFW). I implemented my own math library originally ([which you can see here](source/c_blockgame_september_snippet/old_custom_math_src/src_oldcustommath/include/basic_types.h)) but swapped it out for [cglm](https://github.com/recp/cglm) since I was short on time and needed to trust the mathematical correctness immediately when debugging rendering errors, rather than rushing through math functions without thorough testing.
+
+RenderDoc and OpenGL 4.5's debugging API were very useful for GPU debugging, which I needed to do a lot of, especially for building and uploading the mesh data of each voxel chunk.
+
 
 ## Compiler for Java-like language 'Jack' written in C (2024)
 
