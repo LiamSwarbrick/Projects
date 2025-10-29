@@ -32,6 +32,7 @@ Here are some of my projects; my main focus currently is on real time rendering 
 
 ## Scalable Real-Time Polygonal Area Lighting (My BSc Thesis & Custom glTF2 Renderer) (2024/25)
 
+<img src="files/newoldimage-normal-clustering-in-suntemple-6normals.png">
 
 _Project Title:_ **"Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading"**
 
@@ -63,8 +64,6 @@ If time allows, this project's is set to be developed further to get to an indus
 
 
 <img src="files/03march-correctarealights-lowres.PNG" width="48%"> <img src="files/newoldimage-locC.PNG" width="49%">
-
-<img src="files/newoldimage-normal-clustering-in-suntemple-6normals.png">
 
 #### Progress screenshots of early versions during the development of the renderer:
 <img src="files/22dec-blendtest.PNG" width="23%"> <img src="files/19dec-100point_lights-shinyUntitled.png" width="23%"> <img src="files/18dec-screenshot.PNG" width="23%"> <img src="files/28dec-cool.PNG" width="23%">
