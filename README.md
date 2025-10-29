@@ -122,9 +122,11 @@ This November 2024, I began my thesis project **"Integrating Linearly-Transforme
 
 ## 2D Platformer Engine in C with Raylib (2023)
 
-![Cropped Gameplay of my 2D platformer engine](files/planetarium-camera-and-entities-cropped.gif)
-<img src="files/planetarium-collision-box.PNG" alt="Collision box from aseprite" width="33%">
-<img src="files/planetarium-room-editor-fun.gif" alt="Tile editor" width="37%">
+<img src="files/planetarium-room-editor-fun.gif" alt="Tile editor" width="39%">
+<img src="files/planetarium-camera-and-entities-cropped.gif" alt="Cropped Gameplay of my 2D platformer engine" width="23.5%">
+<!-- ![Cropped Gameplay of my 2D platformer engine](files/planetarium-camera-and-ventities-cropped.gif) -->
+<img src="files/planetarium-collision-box.PNG" alt="Collision box from aseprite" width="35.5%">
+
 <!-- <img src="files/planetarium-room-editor.gif" alt="Tile editor" width="40%"> -->
 
 - Custom sprite animation and asset system integrated with the Aseprite pixelart program for a simple fun asset pipeline.
