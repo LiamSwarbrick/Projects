@@ -122,7 +122,8 @@ This November 2024, I began my thesis project **"Integrating Linearly-Transforme
 
 ## 2D Platformer Engine in C with Raylib (2023)
 
-<img src="files/planetarium-room-editor-fun.gif" alt="Tile editor" width="32%"> <img src="files/planetarium-camera-and-entities.gif" alt="Gameplay example" width="33%"> <img src="files/planetarium-collision-box.PNG" alt="Collision box from aseprite" width="29%">
+<img src="files/planetarium-room-editor-fun.gif" alt="Tile editor" width="45%">
+<img src="files/planetarium-camera-and-entities.gif" alt="Gameplay example" width="40%"> <img src="files/planetarium-collision-box.PNG" alt="Collision box from aseprite" width="33%">
 <!-- ![Gameplay Example](files/planetarium-camera-and-entities.gif) -->
 <!-- <img src="files/planetarium-camera-and-entities-cropped.gif" alt="Cropped Gameplay of my 2D platformer engine" width="21%"> -->
 
