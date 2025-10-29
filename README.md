@@ -58,9 +58,13 @@ Demo walkthrough of Light Cones for efficient specular in NormalxPosition Cluste
 #### Future Research
 If time allows, this project's is set to be developed further to get to an industrial standard, for instance, light assignment can be speedup massively using sparse clustering, and redeveloping the light assignment approach more soundly should make the algorithm more precise and avoid any edge cases as industry frowns upon edge cases greatly. 
 
-![](files/main-test-crop.jpg)
+<!-- ![](files/main-test-crop.jpg) -->
+<img src="files/main-test-crop.jpg" width="48%"> <img src="files/newoldimage-locB.PNG" width="49%">
 
-<img src="files/03march-correctarealights-lowres.PNG" width="48%"> <img src="files/main-test-viz-crop.PNG" width="49%">
+
+<img src="files/03march-correctarealights-lowres.PNG" width="48%"> <img src="files/newoldimage-locC.PNG" width="49%">
+
+<img src="files/newoldimage-normal-clustering-in-suntemple-6normals.png">
 
 #### Progress screenshots of early versions during the development of the renderer:
 <img src="files/22dec-blendtest.PNG" width="23%"> <img src="files/19dec-100point_lights-shinyUntitled.png" width="23%"> <img src="files/18dec-screenshot.PNG" width="23%"> <img src="files/28dec-cool.PNG" width="23%">
