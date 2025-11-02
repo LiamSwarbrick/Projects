@@ -6,7 +6,7 @@ I am currently in my fourth year at the University of Leeds completing the last 
 
 <!-- I'm actively developing my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**. [(Progress update below.)](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer-progress-update) -->
 
-Here are some of my projects; my main focus currently is on real time rendering and game/engine programming.
+Here are some of my projects; my main focus currently is on real time rendering, tooling, GPU and game engine programming.
 
 <details>
 <summary><strong>My Projects - Table of Contents </strong></summary>
