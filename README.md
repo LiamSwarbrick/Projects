@@ -1,12 +1,25 @@
 # My Projects
-**Liam Swarbrick**  
-<!-- _Looking for a summer internship / summer job_ -->
+**Liam Swarbrick, I write high quality software and do research.**
 
-I am currently in my fourth year at the University of Leeds completing the last year of my **MEng/BSc in Computer Science with High Performance Computer Graphics and Games Engineering**.
+
+Hiya,
+I'm a graphics engineer and algorithms researcher, currently contracting @ _Huawei R&D UK_ as part of the GPU team doing 3DGS research. I like to program things from scratch and by hand for fun, whether that be game engines, advanced rendering algorithms, indie games, computational geometry tools, or compilers, or a huge variety more.
+
+I thrive on creating huge systems from the ground up, with highly scalable architectures that enable rapid development of high-performance software, and design qualities that enable teams to work together smoothly.
+I also love the low-level details and have utter-most mechanical sympathy the way the [handmade community](https://handmade.network/) intended.
+
+<!-- I'm really good at designing and building highly scalable architectures for huge systems, like game engines, along with implementing all the low-level details with clean solutions the way the [handmade community](https://handmade.network/) intended. -->
+
+At the University of Leeds, I got my masters (MEng/BSc) in Computer Science, specialising in High Performance Computer Graphics and Games Engineering.
+
+I also enjoy drawing and painting :)
 
 <!-- I'm actively developing my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**. [(Progress update below.)](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer-progress-update) -->
 
-Here are some of my projects; my main focus currently is on real time rendering, tooling, GPU and game engine programming.
+I've made some of my projects public to showcase: They go way back in time to leave a bread crumb trail of things I've been up to over the years.
+
+
+_README Update: Added some background on how I got started with progrmaming and game-dev many years ago in 2016._
 
 <details>
 <summary><strong>My Projects - Table of Contents </strong></summary>
@@ -19,13 +32,13 @@ Here are some of my projects; my main focus currently is on real time rendering,
   - [Voxel Game in C with OpenGL 4.5 from scratch on the Win32API (2022)](#voxel-game-in-c-with-opengl-45-from-scratch-on-the-win32api-2022)
   - [Compiler for Java-like language 'Jack' written in C (2024)](#compiler-for-java-like-language-jack-written-in-c-2024)
   - [Godot-Wild Game-Jam Winner: My Precision Platformer for the theme "One Control" (2019)](#godot-wild-game-jam-winner-my-precision-platformer-for-the-theme-one-control-2019)
-  - [Library Website in Python-Flask (2023)](#library-website-in-python-flask-2023)
   - [My Godot game that ran on the Nintendo Switch (2019)](#my-godot-game-that-ran-on-the-nintendo-switch-2019)
   - [Snippet of my older unfinished but of interest projects](#snippet-of-my-older-unfinished-but-of-interest-projects)
     - [Dual-Quaternion vertex skinning implementation I couldn't render (2020)](#dual-quaternion-vertex-skinning-implementation-i-couldnt-render-2020)
     - [Unfinished C Game-Boy Emulator (2019)](#unfinished-c-game-boy-emulator-2019)
     - [C# Game drop-down console (2018)](#c-game-drop-down-console-2018)
     - [Other Games and Projects (2016-2018)](#other-games-and-projects-2016-2018)
+    - [Pre 2016](#pre-2016)
       - [My old released games on Itch: https://liam-swarbrick.itch.io/ (Creator Page) or https://itch.io/profile/liam-swarbrick (Profile)](#my-old-released-games-on-itch-httpsliam-swarbrickitchio-creator-page-or-httpsitchioprofileliam-swarbrick-profile)
 
 </details>
@@ -181,7 +194,7 @@ The community behind this jam was really great and gave lots of lovely feedback!
 
 
 
-## Library Website in Python-Flask (2023)
+<!-- ## Library Website in Python-Flask (2023)
 
 This project was for a University coursework. The site dynamically loads books from the server, has a secure log in system, book reviews and rating system, user's personal library.
 The site is accessible, for instance in an accessibility pass the colours and contrasts were adjusted to be more colour-blind friendly, and the site passed checks with WAVE (A web accessability evaluation tool).
@@ -189,7 +202,7 @@ The site is accessible, for instance in an accessibility pass the colours and co
 Users, Books, and Reviews are stored in a SQL database. [Here is the models python file for instance](source/library-site-source-snippet/app/models.py)
 
 <img src="files/libsite-bookpage.png" alt="Library website example book page" width="75%">
-<img src="files/libsite-librarypage.png" alt="Library website library page" width="75%">
+<img src="files/libsite-librarypage.png" alt="Library website library page" width="75%"> -->
 
 
 ## My Godot game that ran on the Nintendo Switch (2019)
@@ -268,10 +281,16 @@ Made in C# and Raylib, command processing was implemented after this old video, 
 ### Other Games and Projects (2016-2018)
 
 In these years I developed plenty of small games and programming projects in C#, Godot, and Python to name the most significant.
-For my early days of programming I was making small games in Python, mostly 2D games using the pygame library, and also a basic cube renderer using OpenGL 1's fixed function pipeline.
-In C# I started learning the basic of modern OpenGL, with hobby projects that included texture mapping and point lighting. I was also a fan of XNA games so I made a few very unfinished 2D games in MonoGame.
+For my early days of programming I was making small games in Python, mostly 2D games using the pygame library, and also a basic cube renderer using OpenGL 1's fixed function pipeline shortly after stumbling into [Sentdex's tutorials series](https://www.youtube.com/playlist?list=PLQVvvaa0QuDdfGpqjkEJSeWKGCP31__wD).
+I remember shortly after stumbling in awe upon things like "[Minecraft in Python 2016 300 lines... (Classic Clone)](https://youtu.be/NyBkFkAWnEo?si=aBq6ejXpgXj_yBYm)" which set me forth on my graphics programming journey.
+
+In C# I started learning the basics of modern OpenGL, with hobby projects that included texture mapping and point lighting. I was also a fan of XNA games so I made a few very unfinished 2D games in MonoGame.
+
+### Pre 2016
+
+I was into game development with RPG-Maker VX Ace, peak internet era
 
 #### My old released games on Itch: https://liam-swarbrick.itch.io/ (Creator Page) or https://itch.io/profile/liam-swarbrick (Profile)
-When I found the Godot engine, I became hooked for a while on engine based game development, joining many game jams, participating alot in game development communities and making many small but finished games that other would play and give feedback on via my itch io page.
+When I found the Godot engine, I became hooked for a while on engine based game development, joining many game jams, participating in a lot of game development communities and making many small but finished games that other would play and give feedback on via my itch io page.
 
 Most of my old projects are lost to time, or aren't worth listing here, given they date to when I was just starting to teach myself to program as a teenager.
