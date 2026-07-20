@@ -1,25 +1,24 @@
 # My Projects
-**Liam Swarbrick, I write high quality software and do research.**
+**Liam Swarbrick, I write [high quality software](https://handmade.network/) and do research.**
 
 
 Hiya,
-I'm a graphics engineer and algorithms researcher, currently contracting @ _Huawei R&D UK_ as part of the GPU team doing 3DGS research. I like to program things from scratch and by hand for fun, whether that be game engines, advanced rendering algorithms, indie games, computational geometry tools, or compilers, or a huge variety more.
-
-I thrive on creating huge systems from the ground up, with highly scalable architectures that enable rapid development of high-performance software, and design qualities that enable teams to work together smoothly.
-I also love the low-level details and have utter-most mechanical sympathy the way the [handmade community](https://handmade.network/) intended.
-
-<!-- I'm really good at designing and building highly scalable architectures for huge systems, like game engines, along with implementing all the low-level details with clean solutions the way the [handmade community](https://handmade.network/) intended. -->
+I'm a graphics engineer & systems programmer, currently contracting @ _Huawei R&D UK_ where I'm researching and implementing mobile GPU algorithms, mostly novel gaussian splatting research that goes straight into mobile deployment.
 
 At the University of Leeds, I got my masters (MEng/BSc) in Computer Science, specialising in High Performance Computer Graphics and Games Engineering.
 
-I also enjoy drawing and painting :)
+I thrive on creating huge systems from the ground up, with highly scalable architectures that enable rapid development of high-performance software, and design qualities that enable teams to work together smoothly.
+
+In my spare time I like to program things from scratch by hand, whether that be game engines, advanced rendering algorithms, indie games, computational geometry tools, compilers, or anything.
+
+
+<!-- I'm really good at designing and building highly scalable architectures for huge systems, like game engines, along with implementing all the low-level details with clean solutions the way the [handmade community](https://handmade.network/) intended. -->
+
+I also love drawing and painting :)
 
 <!-- I'm actively developing my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**. [(Progress update below.)](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer-progress-update) -->
 
 I've made some of my projects public to showcase: They go way back in time to leave a bread crumb trail of things I've been up to over the years.
-
-
-_README Update: Added some background on how I got started with progrmaming and game-dev many years ago in 2016._
 
 <details>
 <summary><strong>My Projects - Table of Contents </strong></summary>
@@ -173,7 +172,8 @@ RenderDoc and OpenGL 4.5's debugging API were very useful for GPU debugging, whi
 
 ## Compiler for Java-like language 'Jack' written in C (2024)
 
-This project was for a University coursework, written in C using recursive-descent and it passed all testing and edge cases, receiving max marks. The input is a folder of .jack source files and compiles to virtual machine code for the Hack computer.
+Written in C using recursive-descent, compiling Jack source code into virtual machine code for the Hack computer.
+This was for University, receiving max marks.
 
 <img src="files/jack_compiler_pong.PNG" alt="My compiler's output for Nand2Tetris' Pong jack program" width="75%">
 
