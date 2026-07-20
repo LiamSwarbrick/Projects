@@ -24,6 +24,7 @@ I've made some of my projects public to showcase: They go way back in time to le
 <summary><strong>My Projects - Table of Contents </strong></summary>
 
 - [My Projects](#my-projects)
+- [TODO: Add KillSwitch Game Engine](#todo-add-killswitch-game-engine)
   - [Scalable Real-Time Polygonal Area Lighting (My BSc Thesis \& Custom glTF2 Renderer) (2024/25)](#scalable-real-time-polygonal-area-lighting-my-bsc-thesis--custom-gltf2-renderer-202425)
       - [Future Research](#future-research)
       - [Progress screenshots of early versions during the development of the renderer:](#progress-screenshots-of-early-versions-during-the-development-of-the-renderer)
@@ -41,6 +42,8 @@ I've made some of my projects public to showcase: They go way back in time to le
       - [My old released games on Itch: https://liam-swarbrick.itch.io/ (Creator Page) or https://itch.io/profile/liam-swarbrick (Profile)](#my-old-released-games-on-itch-httpsliam-swarbrickitchio-creator-page-or-httpsitchioprofileliam-swarbrick-profile)
 
 </details>
+
+# TODO: Add KillSwitch Game Engine
 
 ## Scalable Real-Time Polygonal Area Lighting (My BSc Thesis & Custom glTF2 Renderer) (2024/25)
 **"Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading"**
