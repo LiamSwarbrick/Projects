@@ -7,24 +7,20 @@ I'm a graphics engineer & systems programmer, currently contracting @ _Huawei R&
 
 At the University of Leeds, I got my masters (MEng/BSc) in Computer Science, specialising in High Performance Computer Graphics and Games Engineering.
 
-I thrive on creating huge systems from the ground up, with highly scalable architectures that enable rapid development of high-performance software, and design qualities that enable teams to work together smoothly.
+I genuinely enjoy creating huge systems from the ground up, with highly scalable architectures that enable rapid development of high-performance software, and design qualities that enable teams to work together smoothly.
+I also spend much of my time on research & development, and improving huge preexisting projects.
 
-In my spare time I like to program things from scratch by hand, whether that be game engines, advanced rendering algorithms, indie games, computational geometry tools, compilers, or anything.
-
-
-<!-- I'm really good at designing and building highly scalable architectures for huge systems, like game engines, along with implementing all the low-level details with clean solutions the way the [handmade community](https://handmade.network/) intended. -->
+In my spare time I like to program things from scratch by hand, whether that be game engine related, advanced rendering algorithms, indie games, computational geometry tools, compilers, fantasy consoles, or anything.
 
 I also love drawing and painting :)
 
-<!-- I'm actively developing my thesis project **"Integrating Linearly-Transformed Cosine based Area Lights into a Clustered Forward Renderer"**. [(Progress update below.)](#thesis-integrating-linearly-transformed-cosine-based-area-lights-into-a-clustered-forward-renderer-progress-update) -->
-
-I've made some of my projects public to showcase: They go way back in time to leave a bread crumb trail of things I've been up to over the years.
+I've made some of my projects public to showcase: Listing some old ones too to leave a bread crumb trail of things I've been up to over the years.
 
 <details>
 <summary><strong>My Projects - Table of Contents </strong></summary>
 
 - [My Projects](#my-projects)
-- [TODO: Add KillSwitch Game Engine](#todo-add-killswitch-game-engine)
+  - [KillSwitch. A Vulkan-1.4 High Performance Game Engine handmade in 3 months from scratch.](#killswitch-a-vulkan-14-high-performance-game-engine-handmade-in-3-months-from-scratch)
   - [Scalable Real-Time Polygonal Area Lighting (My BSc Thesis \& Custom glTF2 Renderer) (2024/25)](#scalable-real-time-polygonal-area-lighting-my-bsc-thesis--custom-gltf2-renderer-202425)
       - [Future Research](#future-research)
       - [Progress screenshots of early versions during the development of the renderer:](#progress-screenshots-of-early-versions-during-the-development-of-the-renderer)
@@ -43,7 +39,17 @@ I've made some of my projects public to showcase: They go way back in time to le
 
 </details>
 
-# TODO: Add KillSwitch Game Engine
+## KillSwitch. A Vulkan-1.4 High Performance Game Engine handmade in 3 months from scratch.
+... and allowed our third person procedural rogue-like shooter to be rapidly made it in in 1 week.
+
+With 5 collegues, I wrote the entire renderer from scratch and designed the engine architecture modularly, so our team could develop features in parallel rapidly to make the 3 month deadline for our MEng project.
+
+![Juking dumb ah zombo in procedually generated](files/demo-dumb-zombo.gif)
+<a href="https://raw.githubusercontent.com/LiamSwarbrick/KillSwitch-Vulkan-Engine/refs/heads/main/killswitch-poster.png" target="_blank" alt="Engine showcase poster">
+  <img src="files/killswitch-poster.png" />
+</a>
+
+TODO: Link to both reports. (maybe caveat that the report was rushed or something lol)
 
 ## Scalable Real-Time Polygonal Area Lighting (My BSc Thesis & Custom glTF2 Renderer) (2024/25)
 **"Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading"**
