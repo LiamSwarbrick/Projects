@@ -1,14 +1,14 @@
 # My Projects
-**Liam Swarbrick, I write [high quality software](https://handmade.network/) and do research.**
+_Liam Swarbrick_
+**I write [high quality software](https://handmade.network/) and do research.**
 
 
 Hiya,
-I'm a graphics engineer & systems programmer, currently contracting @ _Huawei R&D UK_ where I'm researching and implementing mobile GPU algorithms, mostly novel gaussian splatting research that goes straight into mobile deployment.
+I'm a graphics engineer & systems programmer, currently contracting @ _Huawei R&D UK_ where I'm deep into R&D for 3D and 4D Gaussian Splatting training and rendering on mobile phones, and also developing GPU capture tooling in the graphics driver (Vulkan et al.).
 
 At the University of Leeds, I got my masters (MEng/BSc) in Computer Science, specialising in High Performance Computer Graphics and Games Engineering.
 
-I genuinely enjoy creating huge systems from the ground up, with highly scalable architectures that enable rapid development of high-performance software, and design qualities that enable teams to work together smoothly.
-I also spend much of my time on research & development, and improving huge preexisting projects.
+I excel at (and genuinely really enjoy) designing huge systems like game engines, or novel multifaceted renderers from the ground up. The low-level technical details are profoundly impactful for development speed within teams. To prove this, I architected a game engine that my team and I at Leeds' build called KillSwitch, with a playable rogue-like third-person shooter made in a week using it. It was handmade from scratch in 3 months.
 
 In my spare time I like to program things from scratch by hand, whether that be game engine related, advanced rendering algorithms, indie games, computational geometry tools, compilers, fantasy consoles, or anything.
 
@@ -20,7 +20,7 @@ I've made some of my projects public to showcase: Listing some old ones too to l
 <summary><strong>My Projects - Table of Contents </strong></summary>
 
 - [My Projects](#my-projects)
-  - [KillSwitch. A Vulkan-1.4 High Performance Game Engine handmade in 3 months from scratch.](#killswitch-a-vulkan-14-high-performance-game-engine-handmade-in-3-months-from-scratch)
+  - [KillSwitch. A Vulkan-1.4 FrameGraph-Based High Performance Game Engine handmade in 3 months from scratch.](#killswitch-a-vulkan-14-framegraph-based-high-performance-game-engine-handmade-in-3-months-from-scratch)
   - [Scalable Real-Time Polygonal Area Lighting (My BSc Thesis \& Custom glTF2 Renderer) (2024/25)](#scalable-real-time-polygonal-area-lighting-my-bsc-thesis--custom-gltf2-renderer-202425)
       - [Future Research](#future-research)
       - [Progress screenshots of early versions during the development of the renderer:](#progress-screenshots-of-early-versions-during-the-development-of-the-renderer)
@@ -39,7 +39,8 @@ I've made some of my projects public to showcase: Listing some old ones too to l
 
 </details>
 
-## KillSwitch. A Vulkan-1.4 High Performance Game Engine handmade in 3 months from scratch.
+<a name="killswitch"></a>
+## KillSwitch. A Vulkan-1.4 FrameGraph-Based High Performance Game Engine handmade in 3 months from scratch.
 ... and allowed our third person procedural rogue-like shooter to be rapidly made it in in 1 week.
 
 With 5 collegues, I wrote the entire renderer from scratch and designed the engine architecture modularly, so our team could develop features in parallel rapidly to make the 3 month deadline for our MEng project.
