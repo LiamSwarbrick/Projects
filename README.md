@@ -1,6 +1,7 @@
 # My Projects
 _Liam Swarbrick_
-**I'm researching in neural rendering, and write [high quality software](https://handmade.network/)**
+
+**Inverse rendering research (3/4DGS), and writing [high quality software](https://handmade.network/)**
 
 
 Hiya,
