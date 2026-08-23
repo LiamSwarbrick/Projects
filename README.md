@@ -1,26 +1,30 @@
 # My Projects
 _Liam Swarbrick_
-**I write [high quality software](https://handmade.network/) and do research.**
+**I'm researching in neural rendering, and write [high quality software](https://handmade.network/)**
 
 
 Hiya,
-I'm a graphics engineer & systems programmer, currently contracting @ _Huawei R&D UK_ where I'm deep into R&D for 3D and 4D Gaussian Splatting training and rendering on mobile phones, and also developing GPU capture tooling in the graphics driver (Vulkan et al.).
+I'm a graphics engineer at heart, currently researching for _Huawei R&D UK_, where my graphics/GPU expertise is leading to highly novel training and rendering approaches for 3D and 4D Gaussian Splatting on mobile phones.
+
+<!-- developing GPU capture tooling in the graphics driver (prodominantly Vulkan). -->
 
 At the University of Leeds, I got my masters (MEng/BSc) in Computer Science, specialising in High Performance Computer Graphics and Games Engineering.
 
-I excel at (and genuinely really enjoy) designing huge systems like game engines, or novel multifaceted renderers from the ground up. The low-level technical details are profoundly impactful for development speed within teams. To prove this, I architected a game engine that my team and I at Leeds' build called KillSwitch, with a playable rogue-like third-person shooter made in a week using it. It was handmade from scratch in 3 months.
+<!-- I excel at (and genuinely really enjoy) designing huge systems like game engines, or novel multifaceted renderers from the ground up. Both the high-level research and the low-level technical details are important to me, and I believe they're more correlated than people realise. -->
 
 In my spare time I like to program things from scratch by hand, whether that be game engine related, advanced rendering algorithms, indie games, computational geometry tools, compilers, fantasy consoles, or anything.
 
 I also love drawing and painting :)
 
-I've made some of my projects public to showcase: Listing some old ones too to leave a bread crumb trail of things I've been up to over the years.
+I've made some of my projects public to showcase: Going back throughout the 2020s and 2010s to show some old ones too.
 
 <details>
 <summary><strong>My Projects - Table of Contents </strong></summary>
 
 - [My Projects](#my-projects)
-  - [KillSwitch. A Vulkan-1.4 FrameGraph-Based High Performance Game Engine handmade in 3 months from scratch.](#killswitch-a-vulkan-14-framegraph-based-high-performance-game-engine-handmade-in-3-months-from-scratch)
+    - ["KillSwitch". A Vulkan-1.4 FrameGraph-Based High Performance Game Engine handmade in 3 months from scratch.](#killswitch-a-vulkan-14-framegraph-based-high-performance-game-engine-handmade-in-3-months-from-scratch)
+      - [(1st place Red-Kite Games' Technology Award, 2026 🥳)](#1st-place-red-kite-games-technology-award-2026-)
+        - [A handmade framegraph-based 3D renderer, physics engine, dual-layer skeletal animation system, prefab-based entity system, procedural generation, key-rebinding, and more.](#a-handmade-framegraph-based-3d-renderer-physics-engine-dual-layer-skeletal-animation-system-prefab-based-entity-system-procedural-generation-key-rebinding-and-more)
   - [Scalable Real-Time Polygonal Area Lighting (My BSc Thesis \& Custom glTF2 Renderer) (2024/25)](#scalable-real-time-polygonal-area-lighting-my-bsc-thesis--custom-gltf2-renderer-202425)
       - [Future Research](#future-research)
       - [Progress screenshots of early versions during the development of the renderer:](#progress-screenshots-of-early-versions-during-the-development-of-the-renderer)
@@ -40,17 +44,35 @@ I've made some of my projects public to showcase: Listing some old ones too to l
 </details>
 
 <a name="killswitch"></a>
-## KillSwitch. A Vulkan-1.4 FrameGraph-Based High Performance Game Engine handmade in 3 months from scratch.
-... and allowed our third person procedural rogue-like shooter to be rapidly made it in in 1 week.
+### "KillSwitch". A Vulkan-1.4 FrameGraph-Based High Performance Game Engine handmade in 3 months from scratch.
 
-With 5 collegues, I wrote the entire renderer from scratch and designed the engine architecture modularly, so our team could develop features in parallel rapidly to make the 3 month deadline for our MEng project.
+#### (1st place Red-Kite Games' Technology Award, 2026 🥳)
+
+##### A handmade framegraph-based 3D renderer, physics engine, dual-layer skeletal animation system, prefab-based entity system, procedural generation, key-rebinding, and more.
+
+<!-- I architected the engine, and wrote the entire renderer from scratch (handmade).
+With 5 collegues, our team could develop features in parallel rapidly to make the 3 month deadline for our MEng project. -->
 
 ![Juking dumb ah zombo in procedually generated](files/demo-dumb-zombo.gif)
 <a href="https://raw.githubusercontent.com/LiamSwarbrick/KillSwitch-Vulkan-Engine/refs/heads/main/killswitch-poster.png" target="_blank" alt="Engine showcase poster">
   <img src="files/killswitch-poster.png" />
 </a>
 
-TODO: Link to both reports. (maybe caveat that the report was rushed or something lol)
+I architected the award winning game engine 'KillSwitch', and handwrote the entire frame-graph based renderer, testing how state of the art Vulkan 1.4 features and can simplify the new renderer paradigms.
+
+This was a research endeavour within a team of 6 to explore what makes up a system architecture strong enough to accelerate a team through development whilst preventing technical debt and maximising performance.
+
+See the poster on KillSwitch GitHub for how I tackled many-light shading, multi-pass materials, and many-shadows solution for lower-end iGPUs within my dynamic-framegraph based architecture.
+
+Our modular engine makes use of almost no external libraries, rolling our own renderer, physics engine, dual-layer skeletal animation system, prefab-based entity system, procedural generation, key-rebinding and more. We put together a stylised third-person rogue-like game in the last week of our 3 month dev cycle to showcase the engine.
+
+We demonstrate custom tech can often accelerate development past that of off-the-shelf engines, even within small teams with tight timelines. The principle of a tool's affordance from design-engineering comes to explain this because games can take years to make and each one forms a unique problem space.
+
+For a team accelerating architecture, we find the low-level details must drive the high-level choices, that the hardware cannot be efficiently detached from the problem if you want to solve it fast and right.
+
+Note: Our point on the case for custom tech is not to do with recent developments in AI tooling (I stuck to a no-ai code policy). Rather, we explore graph-based GPU execution, data-oriented design, and architectural decoupling for team parallelism when developing high performance software :)
+
+GitHub https://github.com/LiamSwarbrick/KillSwitch-Vulkan-Engine
 
 ## Scalable Real-Time Polygonal Area Lighting (My BSc Thesis & Custom glTF2 Renderer) (2024/25)
 **"Endless Cinematic Area Lighting: Scalable Real-Time LTC Polygonal Lights with Clustered Forward Shading"**
